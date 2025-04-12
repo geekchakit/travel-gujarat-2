@@ -15,6 +15,7 @@ import {
   MdOutlinePhotoCamera,
   MdOutlineRestaurant,
 } from "react-icons/md";
+import { useForm } from "../context/FormContext";
 
 // Tour package data
 const tourPackagesData = [
@@ -106,7 +107,9 @@ const tourPackagesData = [
 ];
 
 // Individual Tour Package Card component
+
 const TourPackageCard = ({ packageData }) => {
+  const { openForm } = useForm();
   const {
     title,
     image,
@@ -120,7 +123,6 @@ const TourPackageCard = ({ packageData }) => {
     hasFlights,
   } = packageData;
 
-  // Split inclusions into two columns for better display
   const midpoint = Math.ceil(inclusions.length / 2);
   const firstColumnInclusions = inclusions.slice(0, midpoint);
   const secondColumnInclusions = inclusions.slice(midpoint);
@@ -128,7 +130,6 @@ const TourPackageCard = ({ packageData }) => {
   return (
     <div className="max-w-6xl mx-auto mb-10 bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
       <div className="flex flex-col md:flex-row">
-        {/* Left Section - Image */}
         <div className="md:w-1/3 relative">
           <img
             src={image}
@@ -136,14 +137,11 @@ const TourPackageCard = ({ packageData }) => {
             className="w-full h-full object-cover"
             style={{ minHeight: "340px" }}
           />
-
-          {/* Discount tag */}
           <div className="absolute top-6 right-0 bg-red-600 text-white font-bold py-1.5 px-4 shadow-lg rounded-l-md text-sm">
             DISCOUNT {discount}%
           </div>
         </div>
 
-        {/* Middle Section - Package Details */}
         <div className="md:w-2/5 p-6 border-r border-gray-200">
           <div className="flex items-center gap-2 mb-3">
             <h2 className="text-2xl font-bold text-gray-700">{title}</h2>
@@ -166,7 +164,6 @@ const TourPackageCard = ({ packageData }) => {
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3">
-              {/* First column of inclusions */}
               <div className="space-y-3">
                 {firstColumnInclusions.map((inclusion, index) => (
                   <div key={index} className="flex items-start">
@@ -176,7 +173,6 @@ const TourPackageCard = ({ packageData }) => {
                 ))}
               </div>
 
-              {/* Second column of inclusions */}
               <div className="space-y-3">
                 {secondColumnInclusions.map((inclusion, index) => (
                   <div key={index} className="flex items-start">
@@ -188,7 +184,6 @@ const TourPackageCard = ({ packageData }) => {
             </div>
           </div>
 
-          {/* Amenities */}
           <div className="flex justify-between pt-4 border-t border-gray-200">
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-gray-700 mb-1 shadow-sm">
@@ -231,7 +226,6 @@ const TourPackageCard = ({ packageData }) => {
           </div>
         </div>
 
-        {/* Right Section - Pricing & CTA */}
         <div className="md:w-1/4 p-6 flex flex-col justify-between bg-slate-50">
           <div>
             <div className="flex items-center justify-between mb-3">
@@ -276,13 +270,13 @@ const TourPackageCard = ({ packageData }) => {
               <span>WhatsApp</span>
             </a>
 
-            <a
-              href="https://gujrattourpackage.com/"
+            <button
+              onClick={openForm} // Trigger form opening
               className="flex items-center justify-center gap-2.5 py-3.5 px-4 bg-amber-500 text-white font-semibold rounded-md hover:bg-amber-600 transition-colors w-full shadow-sm"
             >
               <FaPaperPlane />
               <span>Send Enquiry</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -290,7 +284,6 @@ const TourPackageCard = ({ packageData }) => {
   );
 };
 
-// Main component without pagination
 const OurTourPackages = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-16">
@@ -307,7 +300,6 @@ const OurTourPackages = () => {
           </p>
         </div>
 
-        {/* Display all tour packages without pagination */}
         {tourPackagesData.map((packageData) => (
           <TourPackageCard key={packageData.id} packageData={packageData} />
         ))}
