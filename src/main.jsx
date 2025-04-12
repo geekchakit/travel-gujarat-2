@@ -6,12 +6,15 @@ import { Provider } from "react-redux";
 import store from "./store/store.jsx";
 import { RouterProvider } from "react-router-dom";
 import AppRouter from "./Router/AppRouter.jsx";
+import { FormProvider } from "./context/FormContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
       <ThemeProvider>
-        <RouterProvider router={AppRouter} />
+        <FormProvider>
+          <RouterProvider router={AppRouter} />
+        </FormProvider>
       </ThemeProvider>
     </Provider>
   </StrictMode>

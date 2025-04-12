@@ -30,3 +30,17 @@
 .animate-slide-up {
   animation: slide-up 0.3s ease forwards;
 }
+
+/* src/index.css or equivalent */
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

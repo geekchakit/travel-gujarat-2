@@ -1,3 +1,4 @@
+// src/components/Hero.js
 import { useState, useEffect } from "react";
 import {
   RiPhoneFill,
@@ -7,10 +8,11 @@ import {
   RiCloseLine,
 } from "react-icons/ri";
 import { MdLocationOn } from "react-icons/md";
+import { useForm } from "../context/FormContext";
 
 const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  const { isFormOpen, setIsFormOpen } = useForm();
 
   // Handle scroll effect
   useEffect(() => {
@@ -22,10 +24,17 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Scroll to top when form opens
+  useEffect(() => {
+    if (isFormOpen) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [isFormOpen]);
+
   return (
     <div
       style={{
-        backgroundImage: "url('/gujaratbg.webp')", // Gujarat-specific image (e.g., Dwarkadheesh Temple)
+        backgroundImage: "url('/gujaratbg.webp')",
       }}
       className="relative w-full min-h-screen bg-cover bg-center font-primary"
     >

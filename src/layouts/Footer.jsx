@@ -52,7 +52,7 @@ const Footer = () => {
             <div className="w-full md:w-1/2 relative">
               <div className="relative h-64 md:h-80 overflow-hidden rounded-xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img
-                  src="/dwarka-somnath-bg.webp"
+                  src="/hero-banner-bg.webp"
                   alt="Gujarat Tourism"
                   className="w-full h-full object-cover object-center"
                 />
