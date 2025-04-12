@@ -27,20 +27,20 @@ const Footer = () => {
                 <span className="text-indigo-600">Gujarat</span>?
               </h2>
               <p className="text-gray-600 mb-8 max-w-lg">
-                From the white sands of Rann of Kutch to the ancient temples of
-                Somnath, let us guide you through the cultural tapestry of
-                Gujarat.
+                From the sacred temples of Dwarka and Somnath to the iconic
+                Statue of Unity, let Gujarat tour package guide you through
+                Gujarat’s spiritual and cultural wonders.
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="#contact"
+                  href="https://wa.me/+919998768210"
                   className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1"
                 >
                   <span>Contact Now</span>
                   <RiArrowRightLine className="ml-2" />
                 </a>
                 <a
-                  href="/tours"
+                  href="https://gujrattourpackage.com/"
                   className="inline-flex items-center px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition transform hover:-translate-y-1"
                 >
                   Browse Tours
@@ -52,14 +52,14 @@ const Footer = () => {
             <div className="w-full md:w-1/2 relative">
               <div className="relative h-64 md:h-80 overflow-hidden rounded-xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img
-                  src="/footer-cta-image.webp"
+                  src="/dwarka-somnath-bg.webp"
                   alt="Gujarat Tourism"
                   className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6">
                   <span className="bg-white/90 text-indigo-800 px-4 py-2 rounded-full text-sm font-bold">
-                    Discover Magic
+                    Discover Gujarat
                   </span>
                 </div>
               </div>
@@ -79,15 +79,11 @@ const Footer = () => {
             {/* Company Info */}
             <div>
               <div className="mb-6">
-                <img
-                  src="/logo.png"
-                  alt="Sanskriti Holidays"
-                  className="h-10"
-                />
+                <h2 className="text-xl font-semibold">Gujarat tour package</h2>
               </div>
               <p className="text-gray-600 mb-6">
-                Creating memorable journeys through Gujarat since 2010. Expertly
-                crafted travel experiences for every explorer.
+                Crafting unforgettable Gujarat journeys since 2022. Your trusted
+                partner for spiritual and cultural travel experiences.
               </p>
               <div className="flex space-x-3">
                 <a
@@ -125,7 +121,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="#"
+                    href="https://gujrattourpackage.com/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Home
@@ -141,7 +137,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://gujrattourpackage.com/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Tour Packages
@@ -182,42 +178,42 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="#"
+                    href="https://gujrattourpackage.com/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
-                    Spiritual Gujarat
+                    Dwarka Somnath Tour
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://gujrattourpackage.com/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
-                    Wildlife Safari
+                    Statue of Unity
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://gujrattourpackage.com/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
-                    Cultural Heritage
+                    Panch Dwarka Tour
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://gujrattourpackage.com/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
-                    Desert Adventures
+                    Rann Utsav
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://gujrattourpackage.com/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
-                    Architectural Marvels
+                    Diu Bhavnagar
                   </a>
                 </li>
               </ul>
@@ -233,31 +229,46 @@ const Footer = () => {
                   <li className="flex items-start">
                     <RiMapPin2Fill className="text-indigo-600 text-lg flex-shrink-0 mt-1 mr-3" />
                     <span className="text-gray-600 text-sm">
-                      123 Tourism Lane, Ahmedabad, Gujarat 380001, India
+                      409 Titanium City Centre Mall, Anand Nagar, Ahmedabad,
+                      Gujarat 380017
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <RiMapPin2Fill className="text-indigo-600 text-lg flex-shrink-0 mt-1 mr-3" />
+                    <span className="text-gray-600 text-sm">
+                      SA-12/52-R-1-A, Buddhacity Colony, Sarnath, Varanasi,
+                      Uttar Pradesh 221007
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <RiMapPin2Fill className="text-indigo-600 text-lg flex-shrink-0 mt-1 mr-3" />
+                    <span className="text-gray-600 text-sm">
+                      3rd Floor, 41 A, Syed Amir Ali Ave, Park Circus, Kolkata,
+                      West Bengal 700019
                     </span>
                   </li>
                   <li className="flex items-center">
                     <RiPhoneFill className="text-indigo-600 text-lg flex-shrink-0 mr-3" />
                     <span className="text-gray-600 text-sm">
-                      +91 95842 49004
+                      +91 9998768210
                     </span>
                   </li>
                   <li className="flex items-center">
                     <RiMailFill className="text-indigo-600 text-lg flex-shrink-0 mr-3" />
                     <span className="text-gray-600 text-sm">
-                      sales@sanskritiholidays.com
+                      info@gujrattourpackage.com
                     </span>
                   </li>
                   <li className="flex items-center">
                     <RiWhatsappFill className="text-green-600 text-lg flex-shrink-0 mr-3" />
                     <span className="text-gray-600 text-sm">
-                      +91 95842 49004
+                      +91 9998768210
                     </span>
                   </li>
                 </ul>
                 <div className="mt-4 pt-4 border-t border-gray-200">
                   <a
-                    href="/contact"
+                    href="https://gujrattourpackage.com/"
                     className="text-indigo-600 text-sm font-medium hover:text-indigo-800 transition flex items-center"
                   >
                     Send us a message
@@ -268,33 +279,10 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Newsletter */}
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <div className="flex flex-col md:flex-row md:items-center justify-between">
-              <div className="mb-6 md:mb-0">
-                <h4 className="text-gray-800 font-medium mb-2">Stay Updated</h4>
-                <p className="text-gray-600 text-sm">
-                  Subscribe to our newsletter for exclusive deals and travel
-                  tips
-                </p>
-              </div>
-              <div className="flex w-full md:w-auto">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                />
-                <button className="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-
           {/* Copyright */}
           <div className="mt-8 pt-6 border-t border-gray-200 text-center">
             <p className="text-gray-500 text-sm">
-              © {currentYear} Sanskriti Holidays. All Rights Reserved.
+              © {currentYear} Gujarat tour package. All Rights Reserved.
             </p>
           </div>
         </div>

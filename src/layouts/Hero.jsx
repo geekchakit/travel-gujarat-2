@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('/gujaratbg.webp')", // Replace with your actual temple image
+        backgroundImage: "url('/gujaratbg.webp')", // Gujarat-specific image (e.g., Dwarkadheesh Temple)
       }}
       className="relative w-full min-h-screen bg-cover bg-center font-primary"
     >
@@ -44,33 +44,39 @@ const Hero = () => {
           </div>
 
           <h1 className="font-bold text-6xl sm:text-7xl lg:text-8xl mb-2">
-            GUJARAT
+            DWARKA SOMNATH
           </h1>
 
           <div className="flex items-center flex-wrap gap-4 mb-6">
             <span className="text-xl sm:text-2xl">Tour Packages</span>
             <span className="inline-block px-4 py-1 bg-teal-600 text-white rounded-full text-sm">
-              2N/3D
+              3N/4D
             </span>
           </div>
 
           <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-3 mb-8">
             <span className="text-lg mr-2">Starting from</span>
             <span className="text-2xl sm:text-3xl font-bold text-orange-400">
-              ₹5,999/-
+              ₹5,575/-
             </span>
             <span className="text-white/80 ml-1">PP</span>
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all shadow-lg">
+            <a
+              href="https://wa.me/+919998768210"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all shadow-lg"
+            >
               <RiPhoneFill />
               <span>Book Now</span>
-            </button>
+            </a>
 
-            <button className="border border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all">
+            <a
+              href="https://gujrattourpackage.com/"
+              className="border border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all"
+            >
               View Packages
-            </button>
+            </a>
           </div>
         </div>
 
@@ -149,8 +155,8 @@ const Hero = () => {
                 </button>
 
                 <p className="text-xs text-center text-gray-500">
-                  By clicking submit query i accept the{" "}
-                  <a href="#" className="text-blue-500">
+                  By clicking submit query I accept the{" "}
+                  <a href="/privacy-policy" className="text-blue-500">
                     privacy policy
                   </a>
                   .
@@ -224,21 +230,27 @@ const Hero = () => {
 
               <div className="flex gap-4">
                 <div className="w-1/2">
-                  <input
-                    type="text"
-                    placeholder="Travel Date"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                  />
+                  <div className="relative">
+                    <RiCalendarLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                    <input
+                      type="text"
+                      placeholder="Travel Date"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    />
+                  </div>
                 </div>
 
                 <div className="w-1/2">
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
-                    <option>No. of Adults</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4+</option>
-                  </select>
+                  <div className="relative">
+                    <RiUserLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                    <select className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none bg-white">
+                      <option>No. of Adults</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4+</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
@@ -258,8 +270,11 @@ const Hero = () => {
               </button>
 
               <p className="text-xs text-center text-gray-500">
-                By clicking submit query i accept the{" "}
-                <a href="#" className="text-blue-500">
+                By clicking submit query I accept the{" "}
+                <a
+                  href="https://gujrattourpackage.com/privacy-policy"
+                  className="text-blue-500"
+                >
                   privacy policy
                 </a>
                 .

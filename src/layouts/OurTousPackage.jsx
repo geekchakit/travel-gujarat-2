@@ -20,85 +20,86 @@ import {
 const tourPackagesData = [
   {
     id: 1,
-    title: "Statue of Unity Deluxe Package",
+    title: "Dwarka Somnath Tour",
     image: "/hero-banner-bg.webp",
-    nights: 2,
-    days: 3,
-    price: 5999,
-    originalPrice: 6958,
-    discount: 16,
-    route: "Ahmedabad - Vadodara - Statue of Unity - Ahmedabad Drop",
+    nights: 3,
+    days: 4,
+    price: 5575,
+    originalPrice: 6999,
+    discount: Math.round(((6999 - 5575) / 6999) * 100), // 20%
+    route: "Dwarka (2N) - Somnath (1N) - Drop",
     inclusions: [
-      "2 Nights stay in Vadodara",
-      "Welcome Drink on Arrival (Non Alcoholic)",
-      "Meal Plan Breakfast & Dinner",
-      "All Sightseeing in Private Cab",
-      "Accommodation : On DBL sharing at all the location in Vadodara - Deluxe room",
-      "Kevadia City Tour Sightseeing",
-      "Toll Tax and Parking Charges, Fuel Charges Include",
+      "Pick up/drop from airport/railway station/bus stand",
+      "2 nights stay and sightseeing in Dwarka",
+      "1 night stay and sightseeing in Somnath",
+      "Dwarkadheesh Dham, Nageshwar Jyotirlinga, Somnath Jyotirlinga",
+      "Complete sightseeing in private cab",
+      "Toll tax, driver charges, fuel, parking included",
+      "Free customization with Gujarat expert",
     ],
     hasFlights: false,
   },
   {
     id: 2,
-    title: "Jyotirlinga Package",
+    title: "Dwarka Somnath with Ahmedabad",
     image: "/hero-banner-bg.webp",
-    nights: 3,
-    days: 4,
-    price: 8499,
-    originalPrice: 9858,
-    discount: 16,
-    route: "Dwarka(1N) | Somnath(1N) | Rajkot(1N)",
+    nights: 4,
+    days: 5,
+    price: 6575,
+    originalPrice: 7999,
+    discount: Math.round(((7999 - 6575) / 7999) * 100), // 18%
+    route: "Dwarka (2N) - Somnath (1N) - Ahmedabad (1N) - Drop",
     inclusions: [
-      "Welcome Drink on Arrival (Non Alcoholic)",
-      "Meal Plan Breakfast & Dinner",
-      "Accommodation for 3 Nights",
-      "All Sightseeing in Private Cab",
-      "Accommodation: On DBL sharing at all the location in Luxury Rooms",
-      "Toll Tax and Parking Charges, Fuel Charges Include",
+      "Pick up/drop from airport/railway station/bus stand",
+      "2 nights stay and sightseeing in Dwarka",
+      "1 night stay and sightseeing in Somnath",
+      "1 night stay and sightseeing in Ahmedabad",
+      "Dwarkadheesh Dham, Nageshwar Jyotirlinga, Somnath Jyotirlinga, Akshardham",
+      "Complete sightseeing in private cab",
+      "Toll tax, driver charges, fuel, parking included",
     ],
     hasFlights: false,
   },
   {
     id: 3,
-    title: "Rann of Kutch Desert Adventure",
+    title: "Dwarka Somnath with Statue of Unity",
     image: "/hero-banner-bg.webp",
-    nights: 4,
-    days: 5,
-    price: 9999,
-    originalPrice: 11499,
-    discount: 15,
+    nights: 5,
+    days: 6,
+    price: 8575,
+    originalPrice: 9999,
+    discount: Math.round(((9999 - 8575) / 9999) * 100), // 14%
     route:
-      "Ahmedabad - Bhuj - Great Rann of Kutch - Dholavira - Ahmedabad Drop",
+      "Dwarka (2N) - Somnath (1N) - Ahmedabad (1N) - Statue of Unity (1N) - Drop",
     inclusions: [
-      "4 Nights Accommodation in Hotels",
-      "Welcome Drink on Arrival (Non Alcoholic)",
-      "Meal Plan Breakfast & Dinner",
-      "All Sightseeing in Private Cab",
-      "White Rann Visit with Cultural Program",
-      "Accommodation: On DBL sharing at all locations",
-      "Toll Tax and Parking Charges, Fuel Charges Include",
+      "Pick up/drop from airport/railway station/bus stand",
+      "2 nights stay and sightseeing in Dwarka",
+      "1 night stay and sightseeing in Somnath",
+      "1 night stay and sightseeing in Ahmedabad",
+      "1 night stay near Statue of Unity",
+      "Dwarkadheesh Dham, Nageshwar Jyotirlinga, Somnath Jyotirlinga, Akshardham",
+      "Complete sightseeing in private cab",
     ],
-    hasFlights: true,
+    hasFlights: false,
   },
   {
     id: 4,
-    title: "Gir Wildlife Safari",
+    title: "Panch Dwarka Tour",
     image: "/hero-banner-bg.webp",
-    nights: 3,
-    days: 4,
-    price: 7499,
-    originalPrice: 8799,
-    discount: 14,
-    route: "Ahmedabad - Junagadh - Gir National Park - Ahmedabad Drop",
+    nights: 7,
+    days: 8,
+    price: 16775,
+    originalPrice: 18999,
+    discount: Math.round(((18999 - 16775) / 18999) * 100), // 12%
+    route: "Dwarka (2N) - Udaipur (2N) - Ahmedabad (2N) - Vadodara (1N) - Drop",
     inclusions: [
-      "3 Nights Accommodation in Hotels",
-      "Welcome Drink on Arrival (Non Alcoholic)",
-      "Meal Plan Breakfast & Dinner",
-      "All Sightseeing in Private Cab",
-      "2 Safari trips to Gir National Park",
-      "Accommodation: On DBL sharing at all locations",
-      "Toll Tax and Parking Charges, Fuel Charges Include",
+      "Pick up/drop from airport/railway station/bus stand",
+      "2 nights stay and sightseeing in Dwarka",
+      "2 nights stay and sightseeing in Udaipur",
+      "2 nights stay and sightseeing in Ahmedabad",
+      "1 night stay in Vadodara",
+      "Dwarka, Bhet, Dakor, Nathdwara, Kankroli",
+      "Complete sightseeing in private cab",
     ],
     hasFlights: false,
   },
@@ -260,25 +261,28 @@ const TourPackageCard = ({ packageData }) => {
 
           <div className="space-y-3">
             <a
-              href="tel:+919999233932"
+              href="tel:+919998768210"
               className="flex items-center justify-center gap-2 py-3 px-4 bg-indigo-50 border border-indigo-100 text-indigo-700 font-medium rounded-md hover:bg-indigo-100 transition-colors w-full"
             >
               <FaPhoneAlt />
-              <span>+91 9999233932</span>
+              <span>+91 9998768210</span>
             </a>
 
             <a
-              href="https://wa.me/919999233932"
+              href="https://wa.me/+919998768210"
               className="flex items-center justify-center gap-2 py-3 px-4 bg-green-50 border border-green-100 text-green-700 font-medium rounded-md hover:bg-green-100 transition-colors w-full"
             >
               <FaWhatsapp />
               <span>WhatsApp</span>
             </a>
 
-            <button className="flex items-center justify-center gap-2.5 py-3.5 px-4 bg-amber-500 text-white font-semibold rounded-md hover:bg-amber-600 transition-colors w-full shadow-sm">
+            <a
+              href="https://gujrattourpackage.com/"
+              className="flex items-center justify-center gap-2.5 py-3.5 px-4 bg-amber-500 text-white font-semibold rounded-md hover:bg-amber-600 transition-colors w-full shadow-sm"
+            >
               <FaPaperPlane />
               <span>Send Enquiry</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -293,12 +297,12 @@ const OurTourPackages = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Discover <span className="text-indigo-700">Gujarat</span> Tour
+            Discover <span className="text-indigo-700">Gujarat </span> Tour
             Packages
           </h1>
           <div className="w-24 h-1.5 bg-amber-500 mx-auto my-5 rounded"></div>
           <p className="text-gray-700 max-w-2xl mx-auto text-lg">
-            Experience the culture, heritage and beauty of Gujarat with our
+            Experience the spiritual and cultural heritage of Gujarat with our
             carefully curated tour packages
           </p>
         </div>

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Auth from "../_auth/Auth";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 const AppRouter = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const AppRouter = createBrowserRouter([
   {
     path: "/auth",
     element: <Auth />,
+  },
+  {
+    path: "/privacy-policy",
+    element: <PrivacyPolicy />,
   },
   {
     path: "*",

@@ -19,11 +19,11 @@ const WhyChooseUs = () => {
     {
       icon: <FaComments className="w-10 h-10" />,
       title: "Your Dream Vacation Awaits",
-      description: "with the Best 5-Star Travel Company",
+      description: "with Ahmedabad's Top Travel Agency",
     },
     {
       icon: <FaUsers className="w-10 h-10" />,
-      title: "50+ IITTM Skilled Experts",
+      title: "Dedicated Travel Experts",
       description: "Ready to Serve You",
     },
     {
@@ -33,8 +33,8 @@ const WhyChooseUs = () => {
     },
     {
       icon: <FaLayerGroup className="w-10 h-10" />,
-      title: "Government Approved",
-      description: "Official Gujarat Tourism Partner",
+      title: "Gujarat Tourism Partner",
+      description: "Authentic Local Experiences",
     },
     {
       icon: <FaCamera className="w-10 h-10" />,
@@ -74,7 +74,7 @@ const WhyChooseUs = () => {
         </div>
       </div>
 
-      {/* About Us Section - Simplified and Improved */}
+      {/* About Us Section - Gujarat tour package */}
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
@@ -88,7 +88,7 @@ const WhyChooseUs = () => {
                   className="relative z-10 w-full rounded-lg shadow-lg object-cover h-80"
                 />
                 <div className="absolute right-0 bottom-0 bg-white py-2 px-4 rounded-tl-lg font-semibold text-orange-500 shadow-md z-20 transform translate-y-6">
-                  15+ Years Experience
+                  Since 2022
                 </div>
               </div>
             </div>
@@ -96,21 +96,24 @@ const WhyChooseUs = () => {
             {/* Right side - Content */}
             <div className="w-full md:w-1/2 mt-12 md:mt-0">
               <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                About <span className="text-orange-500">Reena Holidays</span>
+                About{" "}
+                <span className="text-orange-500">Gujarat tour package</span>
               </h2>
 
               <p className="text-gray-700 mb-8 text-lg leading-relaxed">
-                Founded in 2010, Reena Holidays has become Gujarat's premier
-                travel partner, creating unforgettable experiences with our
-                local expertise and personalized approach.
+                Founded in 2022, Gujarat tour package is a premier travel agency
+                located in Ahmedabad, Gujarat, offering a variety of domestic
+                and international vacation packages. Our mission is to make
+                travel enjoyable, economical, and hassle-free for all our
+                clients.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 mb-8">
                 {[
                   "Locally owned & operated",
                   "Customized itineraries",
-                  "Sustainable tourism",
-                  "Award-winning service",
+                  "Affordable packages",
+                  "Hassle-free planning",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <MdVerified className="text-orange-500 flex-shrink-0 w-6 h-6" />
@@ -120,12 +123,21 @@ const WhyChooseUs = () => {
               </div>
 
               <div className="flex space-x-4">
-                <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300">
-                  Our Story
-                </button>
-                <button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-6 py-3 rounded-lg font-medium transition-colors duration-300">
+                <a
+                  href=""
+                  className="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-6 py-3 rounded-lg font-medium transition-colors duration-300"
+                >
                   Contact Us
-                </button>
+                </a>
+              </div>
+
+              <div className="mt-8 p-4 bg-orange-50 rounded-lg border border-orange-100">
+                <p className="text-sm text-gray-600 italic">
+                  Note: The number of passengers, travel date, and season all
+                  affect the tour package's cost. Please get in touch with our
+                  sales team for a final quote; the prices listed are merely
+                  suggestions.
+                </p>
               </div>
             </div>
           </div>

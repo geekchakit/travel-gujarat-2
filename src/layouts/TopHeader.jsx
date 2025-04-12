@@ -33,54 +33,56 @@ const TopHeader = () => {
       <div className="bg-white text-gray-700 text-sm py-2 overflow-hidden">
         <div className="marquee-container">
           <div className="animate-marquee whitespace-nowrap">
-            📢 Summer Sale Now Live! Book Early & Save Up to 25% on Your Next
-            Trip! Hurry, limited-time offer! 📢 | Need assistance? Call our
-            Customer Support at{" "}
+            📢 Explore Gujarat with Gujarat tour package! Book Now & Save Up to
+            20% on Dwarka-Somnath Tours! Hurry, limited-time offer! 📢 | Need
+            assistance? Contact us on WhatsApp at{" "}
             <a
-              href="tel:+919999233932"
+              href="https://wa.me/+919998768210"
               className="underline hover:text-orange-100"
             >
-              📞 (+91) 9999 233 932
+              📞 (+91) 9998 768210
             </a>{" "}
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📢 Summer Sale Now Live! Book Early &
-            Save Up to 25% on Your Next Trip! Hurry, limited-time offer! 📢 |
-            Need assistance? Call our Customer Support at{" "}
+                  📢 Explore Gujarat with Gujarat tour package! Book Now & Save
+            Up to 20% on Dwarka-Somnath Tours! Hurry, limited-time offer! 📢 |
+            Need assistance? Contact us on WhatsApp at{" "}
             <a
-              href="tel:+919999233932"
+              href="https://wa.me/+919998768210"
               className="underline hover:text-orange-100"
             >
-              📞 (+91) 9999 233 932
+              📞 (+91) 9998 768210
             </a>{" "}
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 
           </div>
         </div>
       </div>
 
-      {/* Contact Info & Social Media Bar - Changed to orange theme */}
+      {/* Contact Info & Social Media Bar */}
       <div className="bg-orange-500 text-white py-3">
         <div className="container mx-auto px-4 flex justify-between items-center">
           {/* Left Side - Contact Info */}
           <div className="flex items-center space-x-2 md:space-x-6">
             <a
-              href="mailto:info@reenaholidays.com"
+              href="mailto:info@gujrattourpackage.com"
               className="flex items-center hover:text-orange-100 text-xs md:text-base"
             >
               <RiMailLine className="mr-1 md:mr-2" />
-              <span className="hidden sm:inline">info@reenaholidays.com</span>
+              <span className="hidden sm:inline">
+                info@gujrattourpackage.com
+              </span>
             </a>
             <a
-              href="tel:+919999233932"
+              href="https://wa.me/+919998768210"
               className="flex items-center hover:text-orange-100 text-xs md:text-base"
             >
               <RiPhoneLine className="mr-1 md:mr-2" />
-              <span className="hidden sm:inline">+91 9999 233 932</span>
+              <span className="hidden sm:inline">+91 9998 768210</span>
             </a>
           </div>
 
-          {/* Right Side - GST Info & Social Media */}
+          {/* Right Side - Company Info & Social Media */}
           <div className="flex items-center space-x-2">
             <span className="hidden md:inline mr-6 text-sm">
-              Reena Holidays GST No.: 07EJMPD5911A1ZL
+              Gujarat tour package, Ahmedabad, Gujarat
             </span>
             <div className="flex space-x-2 md:space-x-4">
               <a
@@ -122,21 +124,21 @@ const TopHeader = () => {
           <div className="container mx-auto px-4 pt-3 pb-2 border-t border-orange-400 mt-2">
             <div className="flex flex-col space-y-2">
               <a
-                href="mailto:info@reenaholidays.com"
+                href="mailto:info@gujrattourpackage.com"
                 className="flex items-center hover:text-orange-100"
               >
                 <RiMailLine className="mr-2" />
-                <span>info@reenaholidays.com</span>
+                <span>info@gujrattourpackage.com</span>
               </a>
               <a
-                href="tel:+919999233932"
+                href="https://wa.me/+919998768210"
                 className="flex items-center hover:text-orange-100"
               >
                 <RiPhoneLine className="mr-2" />
-                <span>+91 9999 233 932</span>
+                <span>+91 9998 768210</span>
               </a>
               <div className="text-xs pt-1">
-                Reena Holidays GST No.: 07EJMPD5911A1ZL
+                Gujarat tour package, Ahmedabad, Gujarat
               </div>
             </div>
           </div>
