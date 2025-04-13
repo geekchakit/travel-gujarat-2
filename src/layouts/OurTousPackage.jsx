@@ -18,6 +18,7 @@ import {
   MdOutlineRestaurant,
 } from "react-icons/md";
 import { useForm } from "../context/FormContext";
+import { RiPhoneFill } from "react-icons/ri";
 
 // Tour package data
 const tourPackagesData = [
@@ -162,7 +163,7 @@ const TourPackageCard = ({ packageData }) => {
             <h2 className="text-2xl font-bold text-gray-700">{title}</h2>
           </div>
 
-          <div className="flex items-center gap-4 mb-5 text-sm text-gray-500">
+          <div className="flex items-center gap-4 mb-5 text-base text-gray-700 font-medium">
             <div className="flex items-center">
               <FaCalendarAlt className="text-amber-500 mr-2" />
               <span className="font-medium">{nights} Nights</span>
@@ -270,7 +271,7 @@ const TourPackageCard = ({ packageData }) => {
               <div className="flex items-center mb-3">
                 <FaMapMarkedAlt className="text-indigo-600 mr-2" />
                 <span className="text-sm font-semibold text-gray-700">
-                  Starting Point
+                  Tour Highlights
                 </span>
               </div>
               <div className="bg-indigo-50 p-3 rounded-md border-l-3 border-indigo-400 shadow-sm">
@@ -283,13 +284,19 @@ const TourPackageCard = ({ packageData }) => {
 
           <div className="space-y-4">
             <a
+              href="tel:+919998768210"
+              className="flex items-center justify-center gap-2 py-3.5 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors w-full shadow-md"
+            >
+              <RiPhoneFill />
+              <span>Call Us</span>
+            </a>
+            <a
               href="https://wa.me/+919998768210"
               className="flex items-center justify-center gap-2 py-3.5 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors w-full shadow-md"
             >
               <FaWhatsapp size={18} />
               <span>WhatsApp</span>
             </a>
-
             <button
               onClick={handleEnquiryClick} // Use the new handler
               className="flex items-center justify-center gap-2.5 py-3.5 px-4 bg-gradient-to-r from-indigo-700 to-indigo-900 text-white font-semibold rounded-md hover:from-indigo-800 hover:to-indigo-900 transition-all w-full shadow-md"
