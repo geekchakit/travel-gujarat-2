@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaCalendarAlt,
   FaClock,
   FaMapMarkedAlt,
   FaCheckCircle,
-  FaPhoneAlt,
   FaWhatsapp,
   FaPaperPlane,
+  FaChevronDown,
+  FaChevronUp,
 } from "react-icons/fa";
 import {
   MdOutlineDirectionsCar,
@@ -107,9 +108,10 @@ const tourPackagesData = [
 ];
 
 // Individual Tour Package Card component
-
 const TourPackageCard = ({ packageData }) => {
   const { openForm } = useForm();
+  const [showAllInclusions, setShowAllInclusions] = useState(false);
+
   const {
     title,
     image,
@@ -123,9 +125,10 @@ const TourPackageCard = ({ packageData }) => {
     hasFlights,
   } = packageData;
 
-  const midpoint = Math.ceil(inclusions.length / 2);
-  const firstColumnInclusions = inclusions.slice(0, midpoint);
-  const secondColumnInclusions = inclusions.slice(midpoint);
+  // Show only 3 inclusions initially or all when "Read More" is clicked
+  const visibleInclusions = showAllInclusions
+    ? inclusions
+    : inclusions.slice(0, 3);
 
   return (
     <div className="max-w-6xl mx-auto mb-10 bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
@@ -159,28 +162,39 @@ const TourPackageCard = ({ packageData }) => {
           </div>
 
           <div className="mb-6">
-            <h3 className="text-lg font-medium bg-gray-50 p-2.5 mb-4 text-gray-700 rounded">
+            <h3 className="text-lg font-medium bg-indigo-50 p-3 mb-4 text-indigo-800 rounded-md shadow-sm border-l-4 border-indigo-500">
               Package Inclusions
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3">
-              <div className="space-y-3">
-                {firstColumnInclusions.map((inclusion, index) => (
-                  <div key={index} className="flex items-start">
-                    <FaCheckCircle className="text-green-600 mt-1 mr-2.5 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm">{inclusion}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="space-y-3">
+              {visibleInclusions.map((inclusion, index) => (
+                <div
+                  key={index}
+                  className="flex items-start bg-gradient-to-r from-amber-50 to-transparent p-2 rounded-md border-l-2 border-amber-400"
+                >
+                  <FaCheckCircle className="text-green-600 mt-1 mr-2.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">{inclusion}</span>
+                </div>
+              ))}
 
-              <div className="space-y-3">
-                {secondColumnInclusions.map((inclusion, index) => (
-                  <div key={index} className="flex items-start">
-                    <FaCheckCircle className="text-green-600 mt-1 mr-2.5 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm">{inclusion}</span>
-                  </div>
-                ))}
-              </div>
+              {inclusions.length > 3 && (
+                <button
+                  onClick={() => setShowAllInclusions(!showAllInclusions)}
+                  className="flex items-center mt-2 text-indigo-600 hover:text-indigo-800 font-medium text-sm"
+                >
+                  {showAllInclusions ? (
+                    <>
+                      <FaChevronUp className="mr-1" />
+                      Read Less
+                    </>
+                  ) : (
+                    <>
+                      <FaChevronDown className="mr-1" />
+                      Read More ({inclusions.length - 3} more)
+                    </>
+                  )}
+                </button>
+              )}
             </div>
           </div>
 
@@ -247,32 +261,26 @@ const TourPackageCard = ({ packageData }) => {
                   Starting Point
                 </span>
               </div>
-              <p className="text-sm text-gray-600 pl-6 leading-relaxed">
-                {route}
-              </p>
+              <div className="bg-indigo-50 p-3 rounded-md border-l-3 border-indigo-400 shadow-sm">
+                <p className="text-sm text-gray-700 font-medium leading-relaxed">
+                  {route}
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="space-y-3">
-            <a
-              href="tel:+919998768210"
-              className="flex items-center justify-center gap-2 py-3 px-4 bg-indigo-50 border border-indigo-100 text-indigo-700 font-medium rounded-md hover:bg-indigo-100 transition-colors w-full"
-            >
-              <FaPhoneAlt />
-              <span>+91 9998768210</span>
-            </a>
-
+          <div className="space-y-4">
             <a
               href="https://wa.me/+919998768210"
-              className="flex items-center justify-center gap-2 py-3 px-4 bg-green-50 border border-green-100 text-green-700 font-medium rounded-md hover:bg-green-100 transition-colors w-full"
+              className="flex items-center justify-center gap-2 py-3.5 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors w-full shadow-md"
             >
-              <FaWhatsapp />
+              <FaWhatsapp size={18} />
               <span>WhatsApp</span>
             </a>
 
             <button
-              onClick={openForm} // Trigger form opening
-              className="flex items-center justify-center gap-2.5 py-3.5 px-4 bg-amber-500 text-white font-semibold rounded-md hover:bg-amber-600 transition-colors w-full shadow-sm"
+              onClick={openForm}
+              className="flex items-center justify-center gap-2.5 py-3.5 px-4 bg-gradient-to-r from-indigo-700 to-indigo-900 text-white font-semibold rounded-md hover:from-indigo-800 hover:to-indigo-900 transition-all w-full shadow-md"
             >
               <FaPaperPlane />
               <span>Send Enquiry</span>
