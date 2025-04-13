@@ -1,4 +1,3 @@
-// src/components/Hero.js
 import { useState, useEffect } from "react";
 import {
   RiPhoneFill,
@@ -9,6 +8,8 @@ import {
 } from "react-icons/ri";
 import { MdLocationOn } from "react-icons/md";
 import { useForm } from "../context/FormContext";
+import emailjs from "emailjs-com";
+import swal from "sweetalert";
 
 const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,9 +30,41 @@ const Hero = () => {
     }
   }, [isFormOpen]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      from_name: e.target.fullName.value,
+      contact_no: e.target.contactNumber.value,
+      email_id: e.target.emailAddress.value,
+      number_of_travelers: e.target.numberOfTravelers.value,
+      date_of_travel: e.target.dateOfTravel.value,
+      message: e.target.message.value,
+      website: "Gujarattrip",
+    };
+
+    // alert("Your Response Has been submitted!");
+
+    emailjs
+      .send(
+        "service_v2o5j0l", // Replace with your EmailJS service ID
+        "template_apvv4kv", // Replace with your EmailJS template ID
+        templateParams,
+        "3w5lxrQSjLVVLUx6_" // Replace with your EmailJS public key
+      )
+      .then(
+        () => {
+          swal("Good job!", "Your Response Has been submitted!", "success");
+        },
+        () => {
+          swal("Sorry!", "Something went wrong. Please try again.", "error");
+        }
+      );
+  };
+
   return (
     <div
-      id="hero-section" // Add this ID for scrolling
+      id="hero-section"
       style={{
         backgroundImage: "url('/gujaratbg.webp')",
       }}
@@ -44,48 +77,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 h-full min-h-screen flex flex-col lg:flex-row items-center justify-between py-16">
         {/* Left side - Text content */}
         <div className="w-full lg:w-1/2 text-white mb-8 lg:mb-0">
-          <div className="flex items-center gap-2 mb-4">
-            <MdLocationOn className="text-orange-500 text-xl" />
-            <span className="text-white/90 font-medium text-sm tracking-wider">
-              EXPLORE GUJARAT
-            </span>
-          </div>
-
-          <h1 className="font-bold text-6xl sm:text-7xl lg:text-8xl mb-2">
-            DWARKA SOMNATH
-          </h1>
-
-          <div className="flex items-center flex-wrap gap-4 mb-6">
-            <span className="text-xl sm:text-2xl">Tour Packages</span>
-            <span className="inline-block px-4 py-1 bg-teal-600 text-white rounded-full text-sm">
-              3N/4D
-            </span>
-          </div>
-
-          <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-3 mb-8">
-            <span className="text-lg mr-2">Starting from</span>
-            <span className="text-2xl sm:text-3xl font-bold text-orange-400">
-              ₹5,575/-
-            </span>
-            <span className="text-white/80 ml-1">PP</span>
-          </div>
-
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="https://wa.me/+919998768210"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all shadow-lg"
-            >
-              <RiPhoneFill />
-              <span>Book Now</span>
-            </a>
-
-            <a
-              href="https://gujrattourpackage.com/"
-              className="border border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all"
-            >
-              View Packages
-            </a>
-          </div>
+          {/* Content */}
         </div>
 
         {/* Right side - Form */}
@@ -96,10 +88,11 @@ const Hero = () => {
             </div>
 
             <div className="p-6">
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <input
                     type="text"
+                    name="fullName"
                     placeholder="Name*"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
@@ -108,6 +101,7 @@ const Hero = () => {
                 <div>
                   <input
                     type="email"
+                    name="emailAddress"
                     placeholder="Email Id"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
@@ -116,6 +110,7 @@ const Hero = () => {
                 <div>
                   <input
                     type="tel"
+                    name="contactNumber"
                     placeholder="Mobile No.*"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
@@ -127,6 +122,7 @@ const Hero = () => {
                       <RiCalendarLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                       <input
                         type="text"
+                        name="dateOfTravel"
                         placeholder="Travel Date"
                         className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                       />
@@ -136,7 +132,10 @@ const Hero = () => {
                   <div className="w-1/2">
                     <div className="relative">
                       <RiUserLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                      <select className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none bg-white">
+                      <select
+                        name="numberOfTravelers"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none bg-white"
+                      >
                         <option>No. of Adults</option>
                         <option>1</option>
                         <option>2</option>
@@ -149,6 +148,7 @@ const Hero = () => {
 
                 <div>
                   <textarea
+                    name="message"
                     placeholder="Requirement"
                     rows="4"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
@@ -175,17 +175,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 text-white/80 flex flex-col items-center gap-2 transition-opacity duration-500 ${
-          isScrolled ? "opacity-0" : "opacity-100"
-        }`}
-      >
-        <span className="text-xs font-medium">Scroll to explore</span>
-        <RiArrowDownLine className="animate-bounce" />
-      </div>
-
-      {/* Mobile form toggle - Only on small screens */}
+      {/* Mobile form toggle */}
       <div className="lg:hidden fixed bottom-4 left-0 right-0 px-4 z-40">
         <button
           onClick={() => setIsFormOpen(!isFormOpen)}
@@ -211,10 +201,11 @@ const Hero = () => {
           </div>
 
           <div className="p-6">
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <input
                   type="text"
+                  name="fullName"
                   placeholder="Name*"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
@@ -223,6 +214,7 @@ const Hero = () => {
               <div>
                 <input
                   type="email"
+                  name="emailAddress"
                   placeholder="Email Id"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
@@ -231,6 +223,7 @@ const Hero = () => {
               <div>
                 <input
                   type="tel"
+                  name="contactNumber"
                   placeholder="Mobile No.*"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
@@ -242,6 +235,7 @@ const Hero = () => {
                     <RiCalendarLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                     <input
                       type="text"
+                      name="dateOfTravel"
                       placeholder="Travel Date"
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                     />
@@ -251,7 +245,10 @@ const Hero = () => {
                 <div className="w-1/2">
                   <div className="relative">
                     <RiUserLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                    <select className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none bg-white">
+                    <select
+                      name="numberOfTravelers"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none bg-white"
+                    >
                       <option>No. of Adults</option>
                       <option>1</option>
                       <option>2</option>
@@ -264,6 +261,7 @@ const Hero = () => {
 
               <div>
                 <textarea
+                  name="message"
                   placeholder="Requirement"
                   rows="3"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"

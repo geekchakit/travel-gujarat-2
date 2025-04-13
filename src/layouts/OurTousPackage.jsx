@@ -46,7 +46,7 @@ const tourPackagesData = [
   {
     id: 2,
     title: "Dwarka Somnath with Ahmedabad",
-    image: "/hero-banner-bg.webp",
+    image: "/Amheadbad.webp",
     nights: 4,
     days: 5,
     price: 6575,
@@ -67,7 +67,7 @@ const tourPackagesData = [
   {
     id: 3,
     title: "Dwarka Somnath with Statue of Unity",
-    image: "/hero-banner-bg.webp",
+    image: "/status of unity.jfif",
     nights: 5,
     days: 6,
     price: 8575,
@@ -89,7 +89,7 @@ const tourPackagesData = [
   {
     id: 4,
     title: "Panch Dwarka Tour",
-    image: "/hero-banner-bg.webp",
+    image: "/pancha dwarka.jpg",
     nights: 7,
     days: 8,
     price: 16775,
@@ -283,19 +283,19 @@ const TourPackageCard = ({ packageData }) => {
           </div>
 
           <div className="space-y-4">
-            <a
+            {/* <a
               href="tel:+919998768210"
               className="flex items-center justify-center gap-2 py-3.5 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors w-full shadow-md"
             >
               <RiPhoneFill />
               <span>Call Us</span>
-            </a>
+            </a> */}
             <a
               href="https://wa.me/+919998768210"
               className="flex items-center justify-center gap-2 py-3.5 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors w-full shadow-md"
             >
               <FaWhatsapp size={18} />
-              <span>WhatsApp</span>
+              <span> Get Full Details in whatsaap</span>
             </a>
             <button
               onClick={handleEnquiryClick} // Use the new handler
