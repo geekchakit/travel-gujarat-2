@@ -1,3 +1,4 @@
+// src/components/OurTourPackages.js
 import React, { useState } from "react";
 import {
   FaCalendarAlt,
@@ -107,7 +108,6 @@ const tourPackagesData = [
   },
 ];
 
-// Individual Tour Package Card component
 const TourPackageCard = ({ packageData }) => {
   const { openForm } = useForm();
   const [showAllInclusions, setShowAllInclusions] = useState(false);
@@ -125,10 +125,22 @@ const TourPackageCard = ({ packageData }) => {
     hasFlights,
   } = packageData;
 
-  // Show only 3 inclusions initially or all when "Read More" is clicked
   const visibleInclusions = showAllInclusions
     ? inclusions
     : inclusions.slice(0, 3);
+
+  // Handle click on "Send Enquiry" button
+  const handleEnquiryClick = () => {
+    // For mobile screens (below lg breakpoint), toggle the form
+    if (window.innerWidth < 1024) {
+      openForm(); // Opens the mobile slide-up form
+    }
+    // Always scroll to the Hero section (where the form is on desktop)
+    const heroSection = document.querySelector("#hero-section");
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="max-w-6xl mx-auto mb-10 bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
@@ -279,7 +291,7 @@ const TourPackageCard = ({ packageData }) => {
             </a>
 
             <button
-              onClick={openForm}
+              onClick={handleEnquiryClick} // Use the new handler
               className="flex items-center justify-center gap-2.5 py-3.5 px-4 bg-gradient-to-r from-indigo-700 to-indigo-900 text-white font-semibold rounded-md hover:from-indigo-800 hover:to-indigo-900 transition-all w-full shadow-md"
             >
               <FaPaperPlane />
