@@ -210,7 +210,60 @@ const TourPackageCard = ({ packageData }) => {
               )}
             </div>
           </div>
+        </div>
 
+        <div className="md:w-1/4 p-6 flex flex-col justify-between bg-slate-50">
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <div className="text-lg font-bold text-gray-900">
+                ₹{price.toLocaleString()}
+              </div>
+              <div className="text-red-500 line-through text-lg font-medium">
+                ₹{originalPrice.toLocaleString()}
+              </div>
+            </div>
+            <div className="text-gray-600 text-sm mb-6 font-medium">
+              Price Per Adult
+            </div>
+
+            {/* <div className="mb-6">
+              <div className="flex items-center mb-3">
+                <FaMapMarkedAlt className="text-indigo-600 mr-2" />
+                <span className="text-sm font-semibold text-gray-700">
+                  Tour Highlights
+                </span>
+              </div>
+              <div className="bg-indigo-50 p-3 rounded-md border-l-3 border-indigo-400 shadow-sm">
+                <p className="text-sm text-gray-700 font-medium leading-relaxed">
+                  {route}
+                </p>
+              </div>
+            </div> */}
+          </div>
+
+          <div className="space-y-4">
+            {/* <a
+              href="tel:+919998768210"
+              className="flex items-center justify-center gap-2 py-3.5 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors w-full shadow-md"
+            >
+              <RiPhoneFill />
+              <span>Call Us</span>
+            </a> */}
+            <a
+              href="https://wa.me/+919998768210"
+              className="flex items-center justify-center gap-2 py-3.5 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors w-full shadow-md"
+            >
+              <FaWhatsapp size={18} />
+              <span> Get Full Details in whatsaap</span>
+            </a>
+            <button
+              onClick={handleEnquiryClick} // Use the new handler
+              className="flex items-center justify-center gap-2.5 py-3.5 px-4 bg-gradient-to-r from-indigo-700 to-indigo-900 text-white font-semibold rounded-md hover:from-indigo-800 hover:to-indigo-900 transition-all w-full shadow-md"
+            >
+              <FaPaperPlane />
+              <span>Send Enquiry</span>
+            </button>
+          </div>
           <div className="flex justify-between pt-4 border-t border-gray-200">
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-gray-700 mb-1 shadow-sm">
@@ -250,60 +303,6 @@ const TourPackageCard = ({ packageData }) => {
               </div>
               <span className="text-xs font-medium text-gray-600">Meals</span>
             </div>
-          </div>
-        </div>
-
-        <div className="md:w-1/4 p-6 flex flex-col justify-between bg-slate-50">
-          <div>
-            <div className="flex items-center justify-between mb-3">
-              <div className="text-3xl font-bold text-gray-900">
-                ₹{price.toLocaleString()}
-              </div>
-              <div className="text-red-500 line-through text-lg font-medium">
-                ₹{originalPrice.toLocaleString()}
-              </div>
-            </div>
-            <div className="text-gray-600 text-sm mb-6 font-medium">
-              Price Per Adult
-            </div>
-
-            <div className="mb-6">
-              <div className="flex items-center mb-3">
-                <FaMapMarkedAlt className="text-indigo-600 mr-2" />
-                <span className="text-sm font-semibold text-gray-700">
-                  Tour Highlights
-                </span>
-              </div>
-              <div className="bg-indigo-50 p-3 rounded-md border-l-3 border-indigo-400 shadow-sm">
-                <p className="text-sm text-gray-700 font-medium leading-relaxed">
-                  {route}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            {/* <a
-              href="tel:+919998768210"
-              className="flex items-center justify-center gap-2 py-3.5 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors w-full shadow-md"
-            >
-              <RiPhoneFill />
-              <span>Call Us</span>
-            </a> */}
-            <a
-              href="https://wa.me/+919998768210"
-              className="flex items-center justify-center gap-2 py-3.5 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors w-full shadow-md"
-            >
-              <FaWhatsapp size={18} />
-              <span> Get Full Details in whatsaap</span>
-            </a>
-            <button
-              onClick={handleEnquiryClick} // Use the new handler
-              className="flex items-center justify-center gap-2.5 py-3.5 px-4 bg-gradient-to-r from-indigo-700 to-indigo-900 text-white font-semibold rounded-md hover:from-indigo-800 hover:to-indigo-900 transition-all w-full shadow-md"
-            >
-              <FaPaperPlane />
-              <span>Send Enquiry</span>
-            </button>
           </div>
         </div>
       </div>

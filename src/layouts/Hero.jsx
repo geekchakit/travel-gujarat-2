@@ -77,7 +77,48 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 h-full min-h-screen flex flex-col lg:flex-row items-center justify-between py-16">
         {/* Left side - Text content */}
         <div className="w-full lg:w-1/2 text-white mb-8 lg:mb-0">
-          {/* Content */}
+          <div className="flex items-center gap-2 mb-4">
+            <MdLocationOn className="text-orange-500 text-xl" />
+            <span className="text-white/90 font-medium text-sm tracking-wider">
+              EXPLORE GUJARAT
+            </span>
+          </div>
+
+          <h1 className="font-bold text-6xl sm:text-7xl lg:text-8xl mb-2">
+            DWARKA SOMNATH
+          </h1>
+
+          <div className="flex items-center flex-wrap gap-4 mb-6">
+            <span className="text-xl sm:text-2xl">Tour Packages</span>
+            <span className="inline-block px-4 py-1 bg-teal-600 text-white rounded-full text-sm">
+              3N/4D
+            </span>
+          </div>
+
+          <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-3 mb-8">
+            <span className="text-lg mr-2">Starting from</span>
+            <span className="text-2xl sm:text-3xl font-bold text-orange-400">
+              ₹5,575/-
+            </span>
+            <span className="text-white/80 ml-1">PP</span>
+          </div>
+
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="https://wa.me/+919998768210"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all shadow-lg"
+            >
+              <RiPhoneFill />
+              <span>Book Now</span>
+            </a>
+
+            <a
+              href="https://gujrattourpackage.com/"
+              className="border border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all"
+            >
+              View Packages
+            </a>
+          </div>
         </div>
 
         {/* Right side - Form */}

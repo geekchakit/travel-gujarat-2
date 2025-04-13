@@ -12,8 +12,8 @@ const Home = () => {
       <TopHeader />
       <Header />
       <Hero />
-      <WhyChooseUs />
       <OurToursPackage />
+      <WhyChooseUs />
       <BookingSteps />
       <Footer />
     </div>
