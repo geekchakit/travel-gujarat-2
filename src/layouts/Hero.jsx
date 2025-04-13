@@ -14,7 +14,6 @@ const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isFormOpen, setIsFormOpen } = useForm();
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -24,7 +23,6 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to top when form opens
   useEffect(() => {
     if (isFormOpen) {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -33,6 +31,7 @@ const Hero = () => {
 
   return (
     <div
+      id="hero-section" // Add this ID for scrolling
       style={{
         backgroundImage: "url('/gujaratbg.webp')",
       }}
@@ -280,10 +279,7 @@ const Hero = () => {
 
               <p className="text-xs text-center text-gray-500">
                 By clicking submit query I accept the{" "}
-                <a
-                  href="https://gujrattourpackage.com/privacy-policy"
-                  className="text-blue-500"
-                >
+                <a href="/privacy-policy" className="text-blue-500">
                   privacy policy
                 </a>
                 .
