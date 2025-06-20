@@ -40,7 +40,7 @@ const Footer = () => {
                   <RiArrowRightLine className="ml-2" />
                 </a>
                 <a
-                  href="https://gujrattourpackage.com/"
+                  href="https://travel-gujarat-2.vercel.app/"
                   className="inline-flex items-center px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition transform hover:-translate-y-1"
                 >
                   Browse Tours
@@ -121,7 +121,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="https://gujrattourpackage.com/"
+                    href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Home
@@ -137,7 +137,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://gujrattourpackage.com/"
+                    href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Tour Packages
@@ -178,7 +178,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="https://gujrattourpackage.com/"
+                    href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Dwarka Somnath Tour
@@ -186,7 +186,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://gujrattourpackage.com/"
+                    href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Statue of Unity
@@ -194,7 +194,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://gujrattourpackage.com/"
+                    href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Panch Dwarka Tour
@@ -202,7 +202,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://gujrattourpackage.com/"
+                    href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Rann Utsav
@@ -210,7 +210,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://gujrattourpackage.com/"
+                    href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Diu Bhavnagar
@@ -268,7 +268,7 @@ const Footer = () => {
                 </ul>
                 <div className="mt-4 pt-4 border-t border-gray-200">
                   <a
-                    href="https://gujrattourpackage.com/"
+                    href="https://travel-gujarat-2.vercel.app/"
                     className="text-indigo-600 text-sm font-medium hover:text-indigo-800 transition flex items-center"
                   >
                     Send us a message
