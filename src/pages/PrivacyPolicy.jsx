@@ -84,10 +84,10 @@ const PrivacyPolicy = () => {
               If you have any more queries or worries about our privacy policy,
               please send us an email at
               <a
-                href="mailto:info@darshanrathholidays.com"
+                href="mailto:info@gujrattourpackage.com"
                 className="text-orange-500 hover:text-orange-700 font-medium ml-1"
               >
-                info@darshanrathholidays.com
+                info@gujrattourpackage.com
               </a>
               , and we'll get back to you right away.
             </p>
@@ -97,9 +97,9 @@ const PrivacyPolicy = () => {
                 Last updated: April 12, 2025
               </p>
               <div className="flex items-center">
-                <div className="h-8 w-8 bg-orange-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">DRH</span>
-                </div>
+                {/* <div className="h-8 w-8 bg-orange-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-xs"></span>
+                </div> */}
                 <span className="ml-2 text-orange-600 font-medium">
                   Gujarat tour package
                 </span>
