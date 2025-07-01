@@ -129,7 +129,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://travel-gujarat-2.vercel.app/about-us"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     About Us
@@ -143,7 +143,7 @@ const Footer = () => {
                     Tour Packages
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="#"
                     className="text-gray-600 hover:text-indigo-600 transition"
@@ -166,7 +166,7 @@ const Footer = () => {
                   >
                     Testimonials
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -181,7 +181,7 @@ const Footer = () => {
                     href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
-                    Dwarka Somnath Tour
+                    GUJURAT TEMPLE TOUR
                   </a>
                 </li>
                 <li>
@@ -189,7 +189,7 @@ const Footer = () => {
                     href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
-                    Statue of Unity
+                    PANCHA DWARKA DARSHAN
                   </a>
                 </li>
                 <li>
@@ -197,7 +197,7 @@ const Footer = () => {
                     href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
-                    Panch Dwarka Tour
+                    PILGRIMAGE TOUR OF GUJARAT
                   </a>
                 </li>
                 <li>
@@ -205,15 +205,7 @@ const Footer = () => {
                     href="https://travel-gujarat-2.vercel.app/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
-                    Rann Utsav
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://travel-gujarat-2.vercel.app/"
-                    className="text-gray-600 hover:text-indigo-600 transition"
-                  >
-                    Diu Bhavnagar
+                    SAURASHTRA DARSHAN TOUR
                   </a>
                 </li>
               </ul>

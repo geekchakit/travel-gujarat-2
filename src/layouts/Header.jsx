@@ -12,7 +12,7 @@ const Header = () => {
       <Wrapper>
         <div className="flex flex-row items-center justify-between gap-4">
           <div className="w-full flex flex-row py-6">
-            <h1 className="text-2xl font-semibold">Gujarat tour package</h1>
+            <h1 className="text-2xl font-semibold">Gujarat Tour Package</h1>
           </div>
           <div className="flex flex-row items-center gap-2 shrink-0">
             <IconButton className="text-xl rounded-full bg-green-600" size="lg">

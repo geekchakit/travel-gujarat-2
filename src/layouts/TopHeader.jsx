@@ -33,25 +33,7 @@ const TopHeader = () => {
       <div className="bg-white text-gray-700 text-sm py-2 overflow-hidden">
         <div className="marquee-container">
           <div className="animate-marquee whitespace-nowrap">
-            📢 Explore Gujarat with Gujarat tour package! Book Now & Save Up to
-            20% on Dwarka-Somnath Tours! Hurry, limited-time offer! 📢 | Need
-            assistance? Contact us on WhatsApp at{" "}
-            <a
-              href="https://wa.me/+919998768210"
-              className="underline hover:text-orange-100"
-            >
-              📞 (+91) 9998 768210
-            </a>{" "}
-                  📢 Explore Gujarat with Gujarat tour package! Book Now & Save
-            Up to 20% on Dwarka-Somnath Tours! Hurry, limited-time offer! 📢 |
-            Need assistance? Contact us on WhatsApp at{" "}
-            <a
-              href="https://wa.me/+919998768210"
-              className="underline hover:text-orange-100"
-            >
-              📞 (+91) 9998 768210
-            </a>{" "}
-                 
+           Gujarat tour Package , Dwarka Somnath Tour Package , Nageshwar Jyotirlinga Tour Package , Nishkalanka Mahadev Temple, Saasan Gir, Diu Tour Package , Punch Dwarka tour Package, Complete Gujarat Tour Package,Gujarat Family Tour Package , Rann Utsav tour Package, Kutch Tour Package , Gujarat Trip Package, Statue Of Unity tour Package. 
           </div>
         </div>
       </div>
@@ -71,11 +53,11 @@ const TopHeader = () => {
               </span>
             </a>
             <a
-              href="https://wa.me/+919998768210"
+              href="https://wa.me/+919898895766"
               className="flex items-center hover:text-orange-100 text-xs md:text-base"
             >
               <RiPhoneLine className="mr-1 md:mr-2" />
-              <span className="hidden sm:inline">+91 9998 768210</span>
+              <span className="hidden sm:inline">+91 9898 898766</span>
             </a>
           </div>
 
@@ -84,7 +66,7 @@ const TopHeader = () => {
             <span className="hidden md:inline mr-6 text-sm">
               Gujarat tour package, Ahmedabad, Gujarat
             </span>
-            <div className="flex space-x-2 md:space-x-4">
+            {/* <div className="flex space-x-2 md:space-x-4">
               <a
                 href="#"
                 className="hover:text-orange-100 text-sm md:text-base"
@@ -103,7 +85,7 @@ const TopHeader = () => {
               >
                 <RiYoutubeLine />
               </a>
-            </div>
+            </div> */}
 
             {/* Mobile Menu Toggle */}
             <button

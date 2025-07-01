@@ -6,6 +6,7 @@ import {
   FaClock,
   FaLayerGroup,
   FaCamera,
+  FaHotel
 } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 
@@ -33,13 +34,13 @@ const WhyChooseUs = () => {
     },
     {
       icon: <FaLayerGroup className="w-10 h-10" />,
-      title: "Gujarat Tourism Partner",
-      description: "Authentic Local Experiences",
+      title: "Save Time",
+      description: "SAVE TIME-GET PERFECT PLAN WITH EXPERT AND SAVE TIME",
     },
     {
-      icon: <FaCamera className="w-10 h-10" />,
-      title: "Free Photography",
-      description: "Capture Your Special Moments",
+      icon: <FaHotel className="w-10 h-10" />,
+      title: "Best Hotels & Resorts",
+      description: "TRUSTED NETWORK-500+RELIABLE HOTELS AND NETWORK",
     },
   ];
 
@@ -110,8 +111,8 @@ const WhyChooseUs = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 mb-8">
                 {[
-                  "Locally owned & operated",
-                  "Customized itineraries",
+                  // "Locally owned & operated",
+                  // "Customized itineraries",
                   "Affordable packages",
                   "Hassle-free planning",
                 ].map((item, index) => (

@@ -14,6 +14,7 @@ import swal from "sweetalert";
 const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isFormOpen, setIsFormOpen } = useForm();
+  const { openForm } = useForm();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +31,19 @@ const Hero = () => {
     }
   }, [isFormOpen]);
 
+  // Handle click on "Send Enquiry" button
+  const handleEnquiryClick = () => {
+    // For mobile screens (below lg breakpoint), toggle the form
+    if (window.innerWidth < 1024) {
+      openForm(); // Opens the mobile slide-up form
+    }
+    // Always scroll to the Hero section (where the form is on desktop)
+    const heroSection = document.querySelector("#hero-section");
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -37,9 +51,9 @@ const Hero = () => {
       from_name: e.target.fullName.value,
       contact_no: e.target.contactNumber.value,
       email_id: e.target.emailAddress.value,
-      number_of_travelers: e.target.numberOfTravelers.value,
-      date_of_travel: e.target.dateOfTravel.value,
-      message: e.target.message.value,
+      // number_of_travelers: e.target.numberOfTravelers.value,
+      // date_of_travel: e.target.dateOfTravel.value,
+      // message: e.target.message.value,
       website: "Gujarattrip",
     };
 
@@ -84,9 +98,9 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1 className="font-bold text-6xl sm:text-7xl lg:text-8xl mb-2">
+          <h2 className="font-bold text-5xl sm:text-7xl lg:text-6xl mb-2">
             DWARKA SOMNATH
-          </h1>
+          </h2>
 
           <div className="flex items-center flex-wrap gap-4 mb-6">
             <span className="text-xl sm:text-2xl">Tour Packages</span>
@@ -96,7 +110,7 @@ const Hero = () => {
           </div>
 
           <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-3 mb-8">
-            <span className="text-lg mr-2">Starting from</span>
+            {/* <span className="text-lg mr-2">Starting from</span> */}
             <span className="text-2xl sm:text-3xl font-bold text-orange-400">
               ₹5,575/-
             </span>
@@ -104,20 +118,20 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <a
-              href="https://wa.me/+919998768210"
+            <button
+              onClick={handleEnquiryClick}
               className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all shadow-lg"
             >
               <RiPhoneFill />
               <span>Book Now</span>
-            </a>
+            </button>
 
-            <a
+            {/* <a
               href="https://travel-gujarat-2.vercel.app/"
               className="border border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all"
             >
               View Packages
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -157,7 +171,7 @@ const Hero = () => {
                   />
                 </div>
 
-                <div className="flex gap-4">
+                {/* <div className="flex gap-4">
                   <div className="w-1/2">
                     <div className="relative">
                       <RiCalendarLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -194,7 +208,7 @@ const Hero = () => {
                     rows="4"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                   ></textarea>
-                </div>
+                </div> */}
 
                 <button
                   type="submit"
@@ -270,7 +284,7 @@ const Hero = () => {
                 />
               </div>
 
-              <div className="flex gap-4">
+              {/* <div className="flex gap-4">
                 <div className="w-1/2">
                   <div className="relative">
                     <RiCalendarLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -307,7 +321,7 @@ const Hero = () => {
                   rows="3"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 ></textarea>
-              </div>
+              </div> */}
 
               <button
                 type="submit"
