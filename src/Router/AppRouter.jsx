@@ -3,6 +3,7 @@ import App from "../App";
 import Auth from "../_auth/Auth";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import AboutUs from "../pages/AboutUs";
+import GujaratTempleTour from "../pages/gujurat-temple-tour";
 
 const AppRouter = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const AppRouter = createBrowserRouter([
   {
     path: "/about-us",
     element: <AboutUs />,
+  },
+  {
+    path: "/gujarat-temple-tour",
+    element: <GujaratTempleTour />,
   },
   {
     path: "*",

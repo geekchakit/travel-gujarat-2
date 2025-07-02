@@ -333,7 +333,7 @@ const TourPackageCard = ({ packageData }) => {
             </h3>
 
             <div className="space-y-3">
-              {visibleInclusions.map((inclusion, index) => (
+              {inclusions.map((inclusion, index) => (
                 <div
                   key={index}
                   className="flex items-start bg-gradient-to-r from-amber-50 to-transparent p-2 rounded-md border-l-2 border-amber-400"
@@ -343,7 +343,7 @@ const TourPackageCard = ({ packageData }) => {
                 </div>
               ))}
 
-              {inclusions.length > 3 && (
+              {/* {inclusions.length > 3 && (
                 <button
                   onClick={() => setShowAllInclusions(!showAllInclusions)}
                   className="flex items-center mt-2 text-indigo-600 hover:text-indigo-800 font-medium text-sm"
@@ -360,7 +360,7 @@ const TourPackageCard = ({ packageData }) => {
                     </>
                   )}
                 </button>
-              )}
+              )} */}
             </div>
           </div>
         </div>
@@ -371,9 +371,9 @@ const TourPackageCard = ({ packageData }) => {
               <div className="text-lg font-bold text-gray-900">
                 ₹{price.toLocaleString()}
               </div>
-              <div className="text-red-500 line-through text-lg font-medium">
+              {/* <div className="text-red-500 line-through text-lg font-medium">
                 ₹{originalPrice.toLocaleString()}
-              </div>
+              </div> */}
             </div>
             <div className="text-gray-600 text-sm mb-6 font-medium">
               Price Per Adult
