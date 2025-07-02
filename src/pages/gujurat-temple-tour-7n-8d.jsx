@@ -26,68 +26,95 @@ import TopHeader from "../layouts/TopHeader";
 import { useForm } from "../context/FormContext";
 import emailjs from "emailjs-com";
 
-const GujaratTempleTour7N8D = () => {
+const GujaratTempleTour = () => {
   const { openForm } = useForm();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [expandedDay, setExpandedDay] = useState(null);
 
-  const stats = [
-    { number: "4N/5D", label: "Duration", icon: RiCalendarFill },
-    { number: "3", label: "Holy Cities", icon: RiMapPin2Fill },
-    { number: "15+", label: "Sacred Sites", icon: RiStarFill },
-    { number: "100%", label: "Spiritual", icon: RiHeartFill },
-  ];
+const stats = [
+  { number: "7N/8D", label: "Duration", icon: RiCalendarFill },
+  { number: "6", label: "Cities Covered", icon: RiMapPin2Fill },
+  { number: "8+", label: "Temple Visits", icon: RiStarFill },
+  { number: "100%", label: "Spiritual Delight", icon: RiHeartFill },
+];
 
-  const highlights = [
-    { icon: RiCheckboxCircleFill, text: "Daily Breakfast included", color: "text-green-600" },
-    { icon: RiHotelFill, text: "3-star accommodations", color: "text-blue-600" },
-    { icon: RiCarFill, text: "Private vehicle with driver", color: "text-purple-600" },
-    { icon: RiCamera2Fill, text: "Professional tour assistance", color: "text-orange-600" },
-  ];
 
-  const itinerary = [
-    {
-      day: 1,
-      title: "Ahmedabad - Dwarka",
-      summary: "Journey begins with Jamnagar sightseeing en route to the holy city of Dwarka",
-      details: "Arrival at Ahmedabad, Meet and Greet from our representative, transfer to Dwarka. On the way, explore Jamnagar's famous attractions including Bala Hanuman Temple, Lakhota Lake, and Lakhota Museum. Continue to Dwarka for accommodation.",
-      attractions: ["Bala Hanuman Temple", "Lakhota Lake", "Lakhota Museum"],
-      stay: "Dwarka"
-    },
-    {
-      day: 2,
-      title: "Dwarka Local Sightseeing",
-      summary: "Full day exploring the sacred temples and beaches of Lord Krishna's kingdom",
-      details: "After breakfast, enjoy comprehensive sightseeing of Dwarka covering the most revered temples and spiritual sites associated with Lord Krishna's legacy.",
-      attractions: ["Bheyt Dwarka", "Nageshwar Jyotirlinga", "Gopi Talav", "Bhadkeshwar Temple", "Shivarpur Beach", "Rukmani Temple"],
-      stay: "Dwarka"
-    },
-    {
-      day: 3,
-      title: "Dwarka - Porbandar - Somnath",
-      summary: "Visit Mahatma Gandhi's birthplace and arrive at the legendary Somnath temple",
-      details: "After breakfast, journey toward Somnath with a spiritual stop at Porbandar. Experience the confluence of history and spirituality at various sacred sites.",
-      attractions: ["Harsiddhimata Temple", "Kirti Temple", "Madhavpur Beach", "Bhalka Tirth", "Triveni Sangam", "Somnath Jyotirlinga"],
-      stay: "Somnath"
-    },
-    {
-      day: 4,
-      title: "Somnath - Virpur - Gondal - Ahmedabad",
-      summary: "Explore heritage palaces and return to Ahmedabad via spiritual Virpur",
-      details: "After breakfast, journey to Ahmedabad with enriching stops at Virpur's famous Jalaram Temple and Gondal's royal heritage sites.",
-      attractions: ["Jalaram Temple", "Navlakha Palace", "Vintage Car Museum"],
-      stay: "Ahmedabad"
-    },
-    {
-      day: 5,
-      title: "Ahmedabad Local & Departure",
-      summary: "Discover Ahmedabad's architectural marvels and spiritual sites before departure",
-      details: "After breakfast, comprehensive city tour covering Ahmedabad's iconic landmarks, spiritual centers, and architectural wonders before your departure.",
-      attractions: ["Akshardham Temple", "Sabarmati Ashram", "Adalaj Step Well", "Trimandir", "Atal Bridge", "Sabarmati River Front"],
-      stay: "Departure"
-    }
-  ];
+const highlights = [
+  { icon: RiCheckboxCircleFill, text: "Daily Breakfast only", color: "text-green-600" },
+  { icon: RiHotelFill, text: "Comfortable stays at each destination", color: "text-blue-600" },
+  { icon: RiCarFill, text: "Driver assistance & transfers", color: "text-purple-600" },
+  { icon: RiCamera2Fill, text: "All sightseeing as per itinerary", color: "text-orange-600" },
+];
+
+
+const itinerary = [
+  {
+    day: 1,
+    title: "Ahmedabad - Dwarka",
+    summary: "Start with Jamnagar sightseeing en route to Dwarka",
+    details: "Arrival at Ahmedabad, meet and greet by our representative, then transfer to Dwarka. En route, visit Bala Hanuman Temple, Lakhota Lake, and Lakhota Museum in Jamnagar. Overnight stay in Dwarka.",
+    attractions: ["Bala Hanuman Temple", "Lakhota Lake", "Lakhota Museum"],
+    stay: "Dwarka"
+  },
+  {
+    day: 2,
+    title: "Dwarka Local",
+    summary: "Full-day spiritual exploration of Dwarka",
+    details: "Visit Bheyt Dwarka, Nageshwar Jyotirlinga, Gopi Talav, Bhadkeshwar Temple, Shivarpur Beach, and Rukmani Temple. Return and stay in Dwarka.",
+    attractions: ["Bheyt Dwarka", "Nageshwar Jyotirlinga", "Gopi Talav", "Bhadkeshwar Temple", "Shivarpur Beach", "Rukmani Temple"],
+    stay: "Dwarka"
+  },
+  {
+    day: 3,
+    title: "Dwarka - Porbandar - Somnath",
+    summary: "Travel via Porbandar to Somnath",
+    details: "On the way, visit Harsiddhimata Temple, Kirti Temple, Madhavpur Beach, Bhalka Tirth, Triveni Sangam, and Somnath Jyotirlinga. Overnight stay in Somnath.",
+    attractions: ["Harsiddhimata Temple", "Kirti Temple", "Madhavpur Beach", "Bhalka Tirth", "Triveni Sangam", "Somnath Temple"],
+    stay: "Somnath"
+  },
+  {
+    day: 4,
+    title: "Somnath - Sasangir",
+    summary: "Drive to Sasangir and enjoy wildlife",
+    details: "After breakfast, drive to Sasangir. Enjoy Gir Jungle Safari (own cost). Accommodation in Sasangir.",
+    attractions: ["Gir Jungle Safari"],
+    stay: "Sasangir"
+  },
+  {
+    day: 5,
+    title: "Sasangir - Diu",
+    summary: "Explore the coastal beauty of Diu",
+    details: "Sightseeing of Nagoa Beach, Khukari Memorial, Diu Fort, Gangeshwar Mahadev Temple, and other attractions.",
+    attractions: ["Nagoa Beach", "Khukari Memorial", "Diu Fort", "Gangeshwar Mahadev"],
+    stay: "Diu"
+  },
+  {
+    day: 6,
+    title: "Diu - Bhavnagar",
+    summary: "Visit Nishkalank Mahadev Temple",
+    details: "After breakfast, drive to Bhavnagar. Visit Nishkalank Mahadev Temple. Accommodation at Bhavnagar.",
+    attractions: ["Nishkalank Mahadev Temple"],
+    stay: "Bhavnagar"
+  },
+  {
+    day: 7,
+    title: "Bhavnagar - Ahmedabad",
+    summary: "Return to Ahmedabad with city exploration",
+    details: "Sightseeing includes Kankaria Lake, Atal Bridge, and Sabarmati Riverfront. Accommodation in Ahmedabad.",
+    attractions: ["Kankaria Lake", "Atal Bridge", "Sabarmati Riverfront"],
+    stay: "Ahmedabad"
+  },
+  {
+    day: 8,
+    title: "Ahmedabad Local & Drop",
+    summary: "Final spiritual visits and departure",
+    details: "Visit Akshardham Temple, Sabarmati Ashram, Adalaj Stepwell, Trimandir. Drop at your departure point.",
+    attractions: ["Akshardham Temple", "Sabarmati Ashram", "Adalaj Stepwell", "Trimandir"],
+    stay: "Departure"
+  }
+];
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -163,9 +190,8 @@ const GujaratTempleTour7N8D = () => {
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 Gujarat Temple Tour
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-300">
-                  {" "}4 Nights 5 Days
-                </span>
+<span className="...">7 Nights 8 Days</span>
+
               </h1>
               <p className="text-xl md:text-2xl text-orange-100 mb-8 leading-relaxed">
                 Embark on a sacred journey through Gujarat's most revered temples, from Dwarka's divine shores to Somnath's eternal flame.
@@ -297,15 +323,16 @@ const GujaratTempleTour7N8D = () => {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <div className="prose prose-lg text-gray-700 space-y-6">
-                  <p>
-                    Exploring Gujarat provides a distinctive mix of history, culture, spirituality, and scenic landscapes. Dwarka, regarded as one of India's holiest cities, holds immense spiritual importance as the "Kingdom of Lord Krishna" and one of the four Char Dham pilgrimage sites.
-                  </p>
-                  <p>
-                    Somnath, another significant spiritual destination, is renowned for the Somnath Temple—one of the 12 Jyotirlingas dedicated to Lord Shiva. Located by the Arabian Sea, this temple showcases magnificent architecture and profound historical relevance.
-                  </p>
-                  <p>
-                    This tour offers a transformative experience as you delve into ancient myths and spiritual traditions that have shaped Gujarat's identity. The tranquil coastal atmosphere, combined with rich cultural heritage, creates a deeply rewarding journey for spiritual seekers.
-                  </p>
+<p>
+  Discovering Gujarat offers a unique combination of historical significance, cultural richness, spirituality, and beautiful landscapes. Dwarka, known as one of the most sacred cities in India, holds immense spiritual value. Often referred to as the "Kingdom of Lord Krishna," it is one of the four Char Dham pilgrimage locations, attracting devotees globally.
+</p>
+<p>
+  Somnath is another important spiritual destination, famous for the Somnath Temple, one of the 12 Jyotirlingas dedicated to Lord Shiva. Situated by the Arabian Sea, this temple is celebrated for its architecture and spiritual significance.
+</p>
+<p>
+  Note: This tour package is customizable based on your preferences. Reach out today to tailor your spiritual journey!
+</p>
+
                 </div>
                 
                 <div className="mt-8 p-6 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl border border-orange-200">
@@ -539,4 +566,4 @@ const GujaratTempleTour7N8D = () => {
   );
 };
 
-export default GujaratTempleTour7N8D;
+export default GujaratTempleTour;

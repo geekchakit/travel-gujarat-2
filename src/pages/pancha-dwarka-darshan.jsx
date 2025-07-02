@@ -26,68 +26,95 @@ import TopHeader from "../layouts/TopHeader";
 import { useForm } from "../context/FormContext";
 import emailjs from "emailjs-com";
 
-const GujaratTempleTour7N8D = () => {
+const PanchaDwarkaDarshan = () => {
   const { openForm } = useForm();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [expandedDay, setExpandedDay] = useState(null);
 
   const stats = [
-    { number: "4N/5D", label: "Duration", icon: RiCalendarFill },
-    { number: "3", label: "Holy Cities", icon: RiMapPin2Fill },
-    { number: "15+", label: "Sacred Sites", icon: RiStarFill },
-    { number: "100%", label: "Spiritual", icon: RiHeartFill },
+    { number: "7N/8D", label: "Duration", icon: RiCalendarFill },
+    { number: "5", label: "Krishna Temples", icon: RiMapPin2Fill },
+    { number: "8", label: "Cities Covered", icon: RiCarFill },
+    { number: "100%", label: "Spiritual Bliss", icon: RiHeartFill },
   ];
 
+
   const highlights = [
-    { icon: RiCheckboxCircleFill, text: "Daily Breakfast included", color: "text-green-600" },
-    { icon: RiHotelFill, text: "3-star accommodations", color: "text-blue-600" },
-    { icon: RiCarFill, text: "Private vehicle with driver", color: "text-purple-600" },
-    { icon: RiCamera2Fill, text: "Professional tour assistance", color: "text-orange-600" },
+    { icon: RiCheckboxCircleFill, text: "Daily Breakfast only", color: "text-green-600" },
+    { icon: RiHotelFill, text: "Well-rated accommodations", color: "text-blue-600" },
+    { icon: RiCarFill, text: "Driver assistance & transfers", color: "text-purple-600" },
+    { icon: RiCamera2Fill, text: "All sightseeing as per itinerary", color: "text-orange-600" },
   ];
+
 
   const itinerary = [
     {
       day: 1,
       title: "Ahmedabad - Dwarka",
-      summary: "Journey begins with Jamnagar sightseeing en route to the holy city of Dwarka",
-      details: "Arrival at Ahmedabad, Meet and Greet from our representative, transfer to Dwarka. On the way, explore Jamnagar's famous attractions including Bala Hanuman Temple, Lakhota Lake, and Lakhota Museum. Continue to Dwarka for accommodation.",
+      summary: "Start with Jamnagar sightseeing en route to Dwarka",
+      details: "Arrival at Ahmedabad. Meet & greet by our representative. Proceed to Dwarka. On the way, visit Bala Hanuman Temple, Lakhota Lake, and Lakhota Museum at Jamnagar. Overnight stay in Dwarka.",
       attractions: ["Bala Hanuman Temple", "Lakhota Lake", "Lakhota Museum"],
       stay: "Dwarka"
     },
     {
       day: 2,
-      title: "Dwarka Local Sightseeing",
-      summary: "Full day exploring the sacred temples and beaches of Lord Krishna's kingdom",
-      details: "After breakfast, enjoy comprehensive sightseeing of Dwarka covering the most revered temples and spiritual sites associated with Lord Krishna's legacy.",
+      title: "Dwarka Local",
+      summary: "Explore sacred Krishna temples and beaches",
+      details: "Full day sightseeing of Dwarka including Bheyt Dwarka, Nageshwar Jyotirlinga, Gopi Talav, Bhadkeshwar Temple, Shivarpur Beach, and Rukmani Temple.",
       attractions: ["Bheyt Dwarka", "Nageshwar Jyotirlinga", "Gopi Talav", "Bhadkeshwar Temple", "Shivarpur Beach", "Rukmani Temple"],
       stay: "Dwarka"
     },
     {
       day: 3,
       title: "Dwarka - Porbandar - Somnath",
-      summary: "Visit Mahatma Gandhi's birthplace and arrive at the legendary Somnath temple",
-      details: "After breakfast, journey toward Somnath with a spiritual stop at Porbandar. Experience the confluence of history and spirituality at various sacred sites.",
+      summary: "Visit Porbandar & Somnath Jyotirlinga",
+      details: "Travel to Somnath via Porbandar. Visit Harsiddhimata Temple, Kirti Temple, Madhavpur Beach, Bhalka Tirth, Triveni Sangam, and Somnath Jyotirlinga.",
       attractions: ["Harsiddhimata Temple", "Kirti Temple", "Madhavpur Beach", "Bhalka Tirth", "Triveni Sangam", "Somnath Jyotirlinga"],
       stay: "Somnath"
     },
     {
       day: 4,
-      title: "Somnath - Virpur - Gondal - Ahmedabad",
-      summary: "Explore heritage palaces and return to Ahmedabad via spiritual Virpur",
-      details: "After breakfast, journey to Ahmedabad with enriching stops at Virpur's famous Jalaram Temple and Gondal's royal heritage sites.",
+      title: "Somnath - Virpur - Gondal - Vadodara",
+      summary: "Journey via spiritual and royal landmarks",
+      details: "Post breakfast, drive to Vadodara with en route visit to Jalaram Temple (Virpur), Navlakha Palace, and Vintage Car Museum in Gondal.",
       attractions: ["Jalaram Temple", "Navlakha Palace", "Vintage Car Museum"],
-      stay: "Ahmedabad"
+      stay: "Vadodara"
     },
     {
       day: 5,
-      title: "Ahmedabad Local & Departure",
-      summary: "Discover Ahmedabad's architectural marvels and spiritual sites before departure",
-      details: "After breakfast, comprehensive city tour covering Ahmedabad's iconic landmarks, spiritual centers, and architectural wonders before your departure.",
-      attractions: ["Akshardham Temple", "Sabarmati Ashram", "Adalaj Step Well", "Trimandir", "Atal Bridge", "Sabarmati River Front"],
+      title: "Vadodara - Dakor - Udaipur",
+      summary: "Visit Ranchhodraiji Temple and travel to Udaipur",
+      details: "Visit Dakor Ranchhodraiji Temple. Learn about the legacy of Rishi Dank. Then head to Udaipur for accommodation.",
+      attractions: ["Ranchhodraiji Temple", "Gomti Lake", "Danknath Mahadev Temple"],
+      stay: "Udaipur"
+    },
+    {
+      day: 6,
+      title: "Udaipur - Nathdwara - Kankroli - Mt. Abu",
+      summary: "Krishna temples and journey to Mt. Abu",
+      details: "Visit Nathdwara Shrinathji Temple, Kankroli Dwarkadhish Temple, and transfer to Mount Abu for overnight stay.",
+      attractions: ["Shrinathji Temple", "Kankroli Temple"],
+      stay: "Mount Abu"
+    },
+    {
+      day: 7,
+      title: "Mt. Abu Local - Ahmedabad",
+      summary: "Hill station experience before returning to Ahmedabad",
+      details: "Visit Dilwara Jain Temples and Nakki Lake. Then proceed back to Ahmedabad for accommodation.",
+      attractions: ["Dilwara Jain Temples", "Nakki Lake"],
+      stay: "Ahmedabad"
+    },
+    {
+      day: 8,
+      title: "Ahmedabad Sightseeing & Drop",
+      summary: "Explore the city's spiritual and cultural landmarks",
+      details: "Visit Akshardham Temple, Sabarmati Ashram, Adalaj Stepwell, Trimandir, Atal Bridge, and Sabarmati Riverfront. Tour ends with drop.",
+      attractions: ["Akshardham Temple", "Sabarmati Ashram", "Adalaj Stepwell", "Trimandir", "Atal Bridge", "Sabarmati Riverfront"],
       stay: "Departure"
     }
   ];
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -149,7 +176,7 @@ const GujaratTempleTour7N8D = () => {
     <div className="min-h-screen bg-white">
       <TopHeader />
       <Header />
-      
+
       {/* Hero Section with Form */}
       <section id="hero-section" className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-red-600 to-pink-700">
         <div className="absolute inset-0 bg-black/30"></div>
@@ -162,15 +189,14 @@ const GujaratTempleTour7N8D = () => {
                 <span className="text-sm font-medium">Spiritual Journey</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Gujarat Temple Tour
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-300">
-                  {" "}4 Nights 5 Days
-                </span>
+                Panch Dwarka Darshan
+                <span className="...">7 Nights 8 Days</span>
               </h1>
+
               <p className="text-xl md:text-2xl text-orange-100 mb-8 leading-relaxed">
                 Embark on a sacred journey through Gujarat's most revered temples, from Dwarka's divine shores to Somnath's eternal flame.
               </p>
-              
+
               {/* Highlights Grid */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {highlights.map((highlight, index) => (
@@ -257,7 +283,7 @@ const GujaratTempleTour7N8D = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Floating decorative elements */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-400/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-orange-400/20 rounded-full blur-xl"></div>
@@ -293,21 +319,19 @@ const GujaratTempleTour7N8D = () => {
                 A Sacred Journey Through Gujarat
               </h2>
             </div>
-            
+
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <div className="prose prose-lg text-gray-700 space-y-6">
                   <p>
-                    Exploring Gujarat provides a distinctive mix of history, culture, spirituality, and scenic landscapes. Dwarka, regarded as one of India's holiest cities, holds immense spiritual importance as the "Kingdom of Lord Krishna" and one of the four Char Dham pilgrimage sites.
+                    A Panch Dwarka pilgrimage is a sacred journey across Gujarat and Rajasthan that traces the divine footsteps of Lord Krishna. The route connects five major Krishna temples: Dwarkadhish Temple in Dwarka, Bet Dwarka, Shrinathji Temple in Nathdwara, Ranchhodraiji Temple in Dakor, and Dwarkadhish Temple in Kankroli.
                   </p>
                   <p>
-                    Somnath, another significant spiritual destination, is renowned for the Somnath Temple—one of the 12 Jyotirlingas dedicated to Lord Shiva. Located by the Arabian Sea, this temple showcases magnificent architecture and profound historical relevance.
+                    This 8-day expedition also includes stops at historical and scenic cities like Somnath, Udaipur, Mt. Abu, and Ahmedabad. Each site is a blend of rich mythology, spiritual energy, and cultural heritage.
                   </p>
-                  <p>
-                    This tour offers a transformative experience as you delve into ancient myths and spiritual traditions that have shaped Gujarat's identity. The tranquil coastal atmosphere, combined with rich cultural heritage, creates a deeply rewarding journey for spiritual seekers.
-                  </p>
+
                 </div>
-                
+
                 <div className="mt-8 p-6 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl border border-orange-200">
                   <div className="flex items-start">
                     <RiCheckboxCircleFill className="text-orange-600 text-2xl mr-4 flex-shrink-0 mt-1" />
@@ -320,7 +344,7 @@ const GujaratTempleTour7N8D = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
                   <img
@@ -338,7 +362,7 @@ const GujaratTempleTour7N8D = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Floating elements */}
                 <div className="absolute -top-6 -left-6 w-24 h-24 bg-orange-400/30 rounded-full blur-lg"></div>
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-red-400/30 rounded-full blur-lg"></div>
@@ -364,11 +388,11 @@ const GujaratTempleTour7N8D = () => {
                 Explore each day of your spiritual journey through Gujarat's sacred destinations
               </p>
             </div>
-            
+
             <div className="space-y-6">
               {itinerary.map((day, index) => (
                 <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                  <div 
+                  <div
                     className="p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-200"
                     onClick={() => toggleDay(index)}
                   >
@@ -387,11 +411,11 @@ const GujaratTempleTour7N8D = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {expandedDay === index && (
                     <div className="border-t border-gray-100 p-6 bg-gradient-to-r from-orange-50 to-red-50">
                       <p className="text-gray-700 mb-6 leading-relaxed">{day.details}</p>
-                      
+
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
                           <RiCamera2Fill className="text-orange-600 mr-2" />
@@ -406,7 +430,7 @@ const GujaratTempleTour7N8D = () => {
                           ))}
                         </div>
                       </div>
-                      
+
                       <div className="flex items-center">
                         <RiHotelFill className="text-orange-600 mr-2" />
                         <span className="font-medium text-gray-800">Stay: </span>
@@ -428,12 +452,13 @@ const GujaratTempleTour7N8D = () => {
             <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-3xl p-12 text-white relative overflow-hidden">
               <div className="relative z-10 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Ready for Your Spiritual Journey?
+                  Ready for Your Panch Dwarka Journey?
                 </h2>
+
                 <p className="text-xl text-orange-100 leading-relaxed mb-8">
                   Book your Gujarat Temple Tour today and embark on a transformative spiritual experience through the land of Lord Krishna and ancient traditions.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="https://wa.me/+919998768210"
@@ -450,7 +475,7 @@ const GujaratTempleTour7N8D = () => {
                   </button>
                 </div>
               </div>
-              
+
               {/* Background decorations */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24"></div>
@@ -539,4 +564,4 @@ const GujaratTempleTour7N8D = () => {
   );
 };
 
-export default GujaratTempleTour7N8D;
+export default PanchaDwarkaDarshan;

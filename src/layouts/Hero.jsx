@@ -171,45 +171,6 @@ const Hero = () => {
                   />
                 </div>
 
-                {/* <div className="flex gap-4">
-                  <div className="w-1/2">
-                    <div className="relative">
-                      <RiCalendarLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                      <input
-                        type="text"
-                        name="dateOfTravel"
-                        placeholder="Travel Date"
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="w-1/2">
-                    <div className="relative">
-                      <RiUserLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                      <select
-                        name="numberOfTravelers"
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none bg-white"
-                      >
-                        <option>No. of Adults</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4+</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <textarea
-                    name="message"
-                    placeholder="Requirement"
-                    rows="4"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                  ></textarea>
-                </div> */}
-
                 <button
                   type="submit"
                   className="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-4 rounded-md transition-colors"
@@ -283,45 +244,6 @@ const Hero = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
               </div>
-
-              {/* <div className="flex gap-4">
-                <div className="w-1/2">
-                  <div className="relative">
-                    <RiCalendarLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                    <input
-                      type="text"
-                      name="dateOfTravel"
-                      placeholder="Travel Date"
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    />
-                  </div>
-                </div>
-
-                <div className="w-1/2">
-                  <div className="relative">
-                    <RiUserLine className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                    <select
-                      name="numberOfTravelers"
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none bg-white"
-                    >
-                      <option>No. of Adults</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4+</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <textarea
-                  name="message"
-                  placeholder="Requirement"
-                  rows="3"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                ></textarea>
-              </div> */}
 
               <button
                 type="submit"

@@ -178,7 +178,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="https://travel-gujarat-2.vercel.app/"
+                    href="/gujarat-temple-tour"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     GUJURAT TEMPLE TOUR
@@ -186,7 +186,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://travel-gujarat-2.vercel.app/"
+                    href="/pancha-dwarka-darshan"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     PANCHA DWARKA DARSHAN
@@ -194,7 +194,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://travel-gujarat-2.vercel.app/"
+                    href="/gujarat-temple-tour-7n-8d"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     PILGRIMAGE TOUR OF GUJARAT
@@ -202,7 +202,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://travel-gujarat-2.vercel.app/"
+                    href="/saurashtra-darshan-tour"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     SAURASHTRA DARSHAN TOUR
