@@ -33,14 +33,14 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="https://wa.me/+919998768210"
+                  href="https://wa.me/+919898895766"
                   className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1"
                 >
                   <span>Contact Now</span>
                   <RiArrowRightLine className="ml-2" />
                 </a>
                 <a
-                  href="https://travel-gujarat-2.vercel.app/"
+                  href="https://gujrattourpackage.com/"
                   className="inline-flex items-center px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition transform hover:-translate-y-1"
                 >
                   Browse Tours
@@ -121,7 +121,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="https://travel-gujarat-2.vercel.app/"
+                    href="https://gujrattourpackage.com/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Home
@@ -129,7 +129,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://travel-gujarat-2.vercel.app/about-us"
+                    href="https://gujrattourpackage.com/about-us"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     About Us
@@ -137,7 +137,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://travel-gujarat-2.vercel.app/"
+                    href="https://gujrattourpackage.com/"
                     className="text-gray-600 hover:text-indigo-600 transition"
                   >
                     Tour Packages
@@ -260,7 +260,7 @@ const Footer = () => {
                 </ul>
                 <div className="mt-4 pt-4 border-t border-gray-200">
                   <a
-                    href="https://travel-gujarat-2.vercel.app/"
+                    href="https://gujrattourpackage.com/"
                     className="text-indigo-600 text-sm font-medium hover:text-indigo-800 transition flex items-center"
                   >
                     Send us a message

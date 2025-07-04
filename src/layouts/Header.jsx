@@ -14,7 +14,7 @@ const Header = () => {
           <div className="w-full flex flex-row py-6">
             <h1 className="text-2xl font-semibold">Gujarat Tour Package</h1>
           </div>
-          <div className="flex flex-row items-center gap-2 shrink-0">
+          {/* <div className="flex flex-row items-center gap-2 shrink-0">
             <IconButton className="text-xl rounded-full bg-green-600" size="lg">
               <RiWhatsappLine />
             </IconButton>
@@ -26,7 +26,7 @@ const Header = () => {
               <RiMessage2Line className="text-lg" />
               <span className="hidden sm:inline-block">Get Free Quote</span>
             </Button>
-          </div>
+          </div> */}
         </div>
       </Wrapper>
     </div>

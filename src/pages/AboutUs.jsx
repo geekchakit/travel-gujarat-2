@@ -118,14 +118,14 @@ const AboutUs = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://travel-gujarat-2.vercel.app/"
+                href="https://gujrattourpackage.com/"
                 className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Explore Our Tours
                 <RiArrowRightLine className="ml-2" />
               </a>
               <a
-                href="https://wa.me/+919998768210"
+                href="https://wa.me/+919898895766"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               >
                 Contact Us Today
@@ -275,7 +275,7 @@ const AboutUs = () => {
                 
                 <div className="text-center mt-12">
                   <a
-                    href="https://travel-gujarat-2.vercel.app/"
+                    href="https://gujrattourpackage.com/"
                     className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                   >
                     Start Your Journey

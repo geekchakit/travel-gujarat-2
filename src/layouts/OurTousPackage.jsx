@@ -396,14 +396,14 @@ const TourPackageCard = ({ packageData }) => {
 
           <div className="space-y-4">
             {/* <a
-              href="tel:+919998768210"
+              href="tel:+919898895766"
               className="flex items-center justify-center gap-2 py-3.5 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors w-full shadow-md"
             >
               <RiPhoneFill />
               <span>Call Us</span>
             </a> */}
             <a
-              href="https://wa.me/+919998768210"
+              href="https://wa.me/+919898895766"
               className="flex items-center justify-center gap-2 py-3.5 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors w-full shadow-md"
             >
               <FaWhatsapp size={18} />

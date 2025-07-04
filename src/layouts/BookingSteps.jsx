@@ -64,7 +64,7 @@ const BookingSteps = () => {
 
       {/* WhatsApp Icon with Blink Animation */}
         <a
-          href="https://wa.me/+919998768210?text=Hello%20I%20need%20Gujarat%20Tour%20Package%20Details"
+          href="https://wa.me/+919898895766?text=Hello%20I%20need%20Gujarat%20Tour%20Package%20Details"
           className="fixed z-[999] bottom-20 left-6 bg-green-500 rounded-full w-14 h-14 flex items-center justify-center shadow-lg cursor-pointer hover:bg-green-600 animate-blink transition duration-300"
         >
           <svg
@@ -78,7 +78,7 @@ const BookingSteps = () => {
         </a>
         {/* Call Button with Blink Animation */}
       <a
-        href="tel:+919998768210"
+        href="tel:+919898895766"
         className="fixed z-[999] bottom-20 right-6 bg-blue-500 rounded-full w-14 h-14 flex items-center justify-center shadow-lg cursor-pointer hover:bg-blue-600 animate-blink transition duration-300"
         title="Call Us"
       >

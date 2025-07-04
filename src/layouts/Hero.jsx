@@ -127,7 +127,7 @@ const Hero = () => {
             </button>
 
             {/* <a
-              href="https://travel-gujarat-2.vercel.app/"
+              href="https://gujrattourpackage.com/"
               className="border border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all"
             >
               View Packages

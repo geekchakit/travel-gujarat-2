@@ -113,7 +113,7 @@ const TopHeader = () => {
                 <span>info@gujrattourpackage.com</span>
               </a>
               <a
-                href="https://wa.me/+919998768210"
+                href="https://wa.me/+919898895766"
                 className="flex items-center hover:text-orange-100"
               >
                 <RiPhoneLine className="mr-2" />
