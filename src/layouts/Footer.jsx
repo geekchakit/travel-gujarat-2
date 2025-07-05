@@ -242,7 +242,7 @@ const Footer = () => {
                   <li className="flex items-center">
                     <RiPhoneFill className="text-indigo-600 text-lg flex-shrink-0 mr-3" />
                     <span className="text-gray-600 text-sm">
-                      +91 9998768210
+                      +91 9898895766
                     </span>
                   </li>
                   <li className="flex items-center">
@@ -254,7 +254,7 @@ const Footer = () => {
                   <li className="flex items-center">
                     <RiWhatsappFill className="text-green-600 text-lg flex-shrink-0 mr-3" />
                     <span className="text-gray-600 text-sm">
-                      +91 9998768210
+                      +91 9898895766
                     </span>
                   </li>
                 </ul>
