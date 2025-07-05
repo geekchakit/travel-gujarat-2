@@ -407,8 +407,8 @@ const TourPackageCard = ({ packageData }) => {
               className="flex items-center justify-center gap-2 py-3.5 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors w-full shadow-md"
             >
               <FaWhatsapp size={18} />
-              {/* <span> Get Full Details in whatsaap</span> */}
-              <span>+91 98988 95766</span>
+              <span> Get Details in whatsaap</span>
+              {/* <span>+91 98988 95766</span> */}
             </a>
             <button
               onClick={handleEnquiryClick} // Use the new handler
