@@ -408,7 +408,7 @@ const TourPackageCard = ({ packageData }) => {
             >
               <FaWhatsapp size={18} />
               {/* <span> Get Full Details in whatsaap</span> */}
-              <span>+91 99987 68210</span>
+              <span>+91 98988 95766</span>
             </a>
             <button
               onClick={handleEnquiryClick} // Use the new handler
