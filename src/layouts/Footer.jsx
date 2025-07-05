@@ -33,7 +33,7 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="https://wa.me/+919898895766"
+                  href="https://wa.me/+919898895766?text=I%20need%20Gujarat%20tour%20package"
                   className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1"
                 >
                   <span>Contact Now</span>

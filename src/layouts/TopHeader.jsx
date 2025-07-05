@@ -53,7 +53,7 @@ const TopHeader = () => {
               </span>
             </a>
             <a
-              href="https://wa.me/+919898895766"
+              href="https://wa.me/+919898895766?text=I%20need%20Gujarat%20tour%20package"
               className="flex items-center hover:text-orange-100 text-xs md:text-base"
             >
               <RiPhoneLine className="mr-1 md:mr-2" />
@@ -113,7 +113,7 @@ const TopHeader = () => {
                 <span>info@gujrattourpackage.com</span>
               </a>
               <a
-                href="https://wa.me/+919898895766"
+                href="https://wa.me/+919898895766?text=I%20need%20Gujarat%20tour%20package"
                 className="flex items-center hover:text-orange-100"
               >
                 <RiPhoneLine className="mr-2" />

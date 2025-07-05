@@ -227,7 +227,7 @@ const itinerary = [
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://wa.me/+919898895766"
+                  href="https://wa.me/+919898895766?text=I%20need%20Gujarat%20tour%20package"
                   className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                 >
                   Book Now
@@ -481,7 +481,7 @@ const itinerary = [
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="https://wa.me/+919898895766"
+                    href="https://wa.me/+919898895766?text=I%20need%20Gujarat%20tour%20package"
                     className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                   >
                     Book Now on WhatsApp

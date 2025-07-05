@@ -403,7 +403,7 @@ const TourPackageCard = ({ packageData }) => {
               <span>Call Us</span>
             </a> */}
             <a
-              href="https://wa.me/+919898895766"
+              href="https://wa.me/+919898895766?text=I%20need%20Gujarat%20tour%20package"
               className="flex items-center justify-center gap-2 py-3.5 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors w-full shadow-md"
             >
               <FaWhatsapp size={18} />

@@ -64,7 +64,7 @@ const BookingSteps = () => {
 
       {/* WhatsApp Icon with Blink Animation */}
         <a
-          href="https://wa.me/+919898895766?text=Hello%20I%20need%20Gujarat%20Tour%20Package%20Details"
+          href="https://wa.me/+919898895766?text=I%20need%20Gujarat%20tour%20package?text=Hello%20I%20need%20Gujarat%20Tour%20Package%20Details"
           className="fixed z-[999] bottom-20 left-6 bg-green-500 rounded-full w-14 h-14 flex items-center justify-center shadow-lg cursor-pointer hover:bg-green-600 animate-blink transition duration-300"
         >
           <svg

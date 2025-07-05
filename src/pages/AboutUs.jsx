@@ -125,7 +125,7 @@ const AboutUs = () => {
                 <RiArrowRightLine className="ml-2" />
               </a>
               <a
-                href="https://wa.me/+919898895766"
+                href="https://wa.me/+919898895766?text=I%20need%20Gujarat%20tour%20package"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               >
                 Contact Us Today
